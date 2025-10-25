@@ -1,0 +1,649 @@
+[
+  {
+    "id": 1,
+    "name": "Quantum Physics Simplified",
+    "image": "https://placehold.co/300?text=Quantum+Physics",
+    "price": { "originalPrice": 850, "discountedPrice": 720 },
+    "category": "Science",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explore the basics of quantum physics in an easy way.",
+      "Understand wave-particle duality with examples.",
+      "Learn about quantum entanglement and superposition.",
+      "Includes practical experiments for beginners.",
+      "Perfect for science enthusiasts and students."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 2,
+    "name": "Advanced Mathematics",
+    "image": "https://placehold.co/300?text=Advanced+Math",
+    "price": { "originalPrice": 900, "discountedPrice": 750 },
+    "category": "Math",
+    "rating": 4.7,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers algebra, calculus, and geometry.",
+      "Includes solved problems and examples.",
+      "Designed for high school and college students.",
+      "Step-by-step explanations for complex topics.",
+      "Enhances logical thinking and problem-solving."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 3,
+    "name": "Organic Chemistry Basics",
+    "image": "https://placehold.co/300?text=Organic+Chemistry",
+    "price": { "originalPrice": 700, "discountedPrice": 600 },
+    "category": "Science",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Learn the fundamentals of organic chemistry.",
+      "Covers molecules, reactions, and structures.",
+      "Includes practice questions and exercises.",
+      "Illustrated with diagrams for clarity.",
+      "Ideal for beginners and chemistry students."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 4,
+    "name": "Introduction to Algebra",
+    "image": "https://placehold.co/300?text=Algebra",
+    "price": { "originalPrice": 500, "discountedPrice": 400 },
+    "category": "Math",
+    "rating": 4.1,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Step-by-step introduction to algebraic concepts.",
+      "Covers equations, inequalities, and functions.",
+      "Practice problems for better understanding.",
+      "Simple language for high school students.",
+      "Includes solved examples and exercises."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": false, "charge": 0 }
+  },
+  {
+    "id": 5,
+    "name": "Biology for Beginners",
+    "image": "https://placehold.co/300?text=Biology",
+    "price": { "originalPrice": 600, "discountedPrice": 500 },
+    "category": "Science",
+    "rating": 4.2,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Introduction to basic biology concepts.",
+      "Covers cells, plants, animals, and ecosystems.",
+      "Includes diagrams and illustrations.",
+      "Simple explanations for easy understanding.",
+      "Good for high school biology students."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 6,
+    "name": "Calculus Made Easy",
+    "image": "https://placehold.co/300?text=Calculus",
+    "price": { "originalPrice": 800, "discountedPrice": 650 },
+    "category": "Math",
+    "rating": 4.6,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explains calculus concepts simply.",
+      "Includes derivatives, integrals, and limits.",
+      "Step-by-step solved problems included.",
+      "Ideal for beginners and college students.",
+      "Focuses on practical applications."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 7,
+    "name": "Modern Physics Explained",
+    "image": "https://placehold.co/300?text=Modern+Physics",
+    "price": { "originalPrice": 900, "discountedPrice": 750 },
+    "category": "Science",
+    "rating": 4.3,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers relativity, quantum theory, and more.",
+      "Includes easy explanations and diagrams.",
+      "Perfect for high school and college students.",
+      "Exercises provided for practice.",
+      "Enhances understanding of modern physics."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 8,
+    "name": "Linear Algebra Made Easy",
+    "image": "https://placehold.co/300?text=Linear+Algebra",
+    "price": { "originalPrice": 780, "discountedPrice": 680 },
+    "category": "Math",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers matrix operations and vector spaces.",
+      "Includes solved examples and exercises.",
+      "Step-by-step guidance for beginners.",
+      "Ideal for high school and college students.",
+      "Focuses on practical problem-solving."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 9,
+    "name": "Physics Problem Solver",
+    "image": "https://placehold.co/300?text=Physics+Problems",
+    "price": { "originalPrice": 850, "discountedPrice": 700 },
+    "category": "Science",
+    "rating": 4.6,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Provides solved physics problems with explanations.",
+      "Covers mechanics, optics, and thermodynamics.",
+      "Includes step-by-step problem-solving techniques.",
+      "Helps improve understanding and exam preparation.",
+      "Ideal for high school and college students."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 10,
+    "name": "Probability and Statistics",
+    "image": "https://placehold.co/300?text=Statistics",
+    "price": { "originalPrice": 800, "discountedPrice": 700 },
+    "category": "Math",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers probability theory and statistical methods.",
+      "Includes examples and solved exercises.",
+      "Designed for high school and college students.",
+      "Focuses on real-world applications.",
+      "Helps in data analysis and decision making."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 11,
+    "name": "Environmental Science Today",
+    "image": "https://placehold.co/300?text=Env+Science",
+    "price": { "originalPrice": 650, "discountedPrice": 550 },
+    "category": "Science",
+    "rating": 4.2,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explains environmental concepts and issues.",
+      "Covers pollution, climate change, and conservation.",
+      "Includes diagrams and case studies.",
+      "Easy to understand for students.",
+      "Promotes awareness about the environment."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 12,
+    "name": "Calculus Advanced",
+    "image": "https://placehold.co/300?text=Calculus+Advanced",
+    "price": { "originalPrice": 850, "discountedPrice": 720 },
+    "category": "Math",
+    "rating": 4.6,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Advanced calculus topics explained clearly.",
+      "Includes integrals, series, and multivariable calculus.",
+      "Step-by-step solved examples provided.",
+      "Ideal for college students.",
+      "Focuses on practical problem-solving."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 13,
+    "name": "Astronomy for Beginners",
+    "image": "https://placehold.co/300?text=Astronomy",
+    "price": { "originalPrice": 800, "discountedPrice": 680 },
+    "category": "Science",
+    "rating": 4.3,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Introduction to astronomy for beginners.",
+      "Covers planets, stars, and galaxies.",
+      "Includes diagrams and telescope guides.",
+      "Easy to understand for students.",
+      "Encourages curiosity about the universe."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 14,
+    "name": "Trigonometry Essentials",
+    "image": "https://placehold.co/300?text=Trigonometry",
+    "price": { "originalPrice": 500, "discountedPrice": 400 },
+    "category": "Math",
+    "rating": 4.2,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers basics of trigonometry functions.",
+      "Includes solved examples and exercises.",
+      "Easy explanations for beginners.",
+      "Helps in exam preparation and practice.",
+      "Useful for high school students."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 15,
+    "name": "Modern Chemistry",
+    "image": "https://placehold.co/300?text=Chemistry",
+    "price": { "originalPrice": 700, "discountedPrice": 600 },
+    "category": "Science",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Modern chemistry concepts explained simply.",
+      "Includes chemical reactions and equations.",
+      "Covers practical lab experiments.",
+      "Good for high school and college students.",
+      "Enhances understanding of chemical processes."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 16,
+    "name": "World History Simplified",
+    "image": "https://placehold.co/300?text=History",
+    "price": { "originalPrice": 650, "discountedPrice": 550 },
+    "category": "History",
+    "rating": 4.3,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers major events in world history.",
+      "Includes timelines and maps for clarity.",
+      "Written in an easy-to-understand format.",
+      "Focuses on important historical figures.",
+      "Ideal for students and history lovers."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 45 }
+  },
+  {
+    "id": 17,
+    "name": "Ancient Civilizations",
+    "image": "https://placehold.co/300?text=Ancient+Civilizations",
+    "price": { "originalPrice": 700, "discountedPrice": 600 },
+    "category": "History",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explores ancient Egypt, Greece, and Rome.",
+      "Highlights cultural and technological advances.",
+      "Includes maps and illustrations.",
+      "Written for students and enthusiasts.",
+      "Enhances understanding of early civilizations."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 18,
+    "name": "Medieval Europe",
+    "image": "https://placehold.co/300?text=Medieval+Europe",
+    "price": { "originalPrice": 680, "discountedPrice": 580 },
+    "category": "History",
+    "rating": 4.2,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers medieval European history and society.",
+      "Focuses on castles, knights, and kings.",
+      "Includes illustrations and timelines.",
+      "Easy-to-read format for students.",
+      "Highlights cultural and political events."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 45 }
+  },
+  {
+    "id": 19,
+    "name": "Modern World History",
+    "image": "https://placehold.co/300?text=Modern+History",
+    "price": { "originalPrice": 720, "discountedPrice": 620 },
+    "category": "History",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers 18th to 21st century history.",
+      "Includes revolutions, wars, and global events.",
+      "Illustrated with photos and maps.",
+      "Good for high school and college students.",
+      "Focuses on modern world developments."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 20,
+    "name": "Geography Basics",
+    "image": "https://placehold.co/300?text=Geography+Basics",
+    "price": { "originalPrice": 600, "discountedPrice": 500 },
+    "category": "Geography",
+    "rating": 4.3,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers continents, countries, and oceans.",
+      "Includes maps and physical geography.",
+      "Designed for beginners and students.",
+      "Illustrates geographic features clearly.",
+      "Enhances understanding of the world."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 21,
+    "name": "Human Geography",
+    "image": "https://placehold.co/300?text=Human+Geography",
+    "price": { "originalPrice": 650, "discountedPrice": 550 },
+    "category": "Geography",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Focuses on human population and settlements.",
+      "Covers cultures, economies, and cities.",
+      "Includes examples and case studies.",
+      "Easy-to-read format for students.",
+      "Highlights human-environment interaction."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 40 }
+  },
+  {
+    "id": 22,
+    "name": "Physical Geography",
+    "image": "https://placehold.co/300?text=Physical+Geography",
+    "price": { "originalPrice": 700, "discountedPrice": 600 },
+    "category": "Geography",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers mountains, rivers, and climate.",
+      "Includes diagrams and maps.",
+      "Designed for high school students.",
+      "Explains physical processes clearly.",
+      "Helps understand Earth's structure."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 23,
+    "name": "Geopolitics Today",
+    "image": "https://placehold.co/300?text=Geopolitics",
+    "price": { "originalPrice": 750, "discountedPrice": 650 },
+    "category": "Geography",
+    "rating": 4.3,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explains modern geopolitical issues.",
+      "Includes case studies of countries.",
+      "Focuses on global politics and borders.",
+      "Easy explanations for students.",
+      "Helps understand world events."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 24,
+    "name": "Cultural Geography",
+    "image": "https://placehold.co/300?text=Cultural+Geography",
+    "price": { "originalPrice": 680, "discountedPrice": 580 },
+    "category": "Geography",
+    "rating": 4.2,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explores cultures and human activities.",
+      "Includes traditions, languages, and religions.",
+      "Illustrated with maps and charts.",
+      "Easy to understand for students.",
+      "Enhances knowledge about global cultures."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 45 }
+  },
+  {
+    "id": 25,
+    "name": "Historical Maps Guide",
+    "image": "https://placehold.co/300?text=Historical+Maps",
+    "price": { "originalPrice": 700, "discountedPrice": 600 },
+    "category": "History",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Includes maps from ancient to modern times.",
+      "Explains historical boundaries and empires.",
+      "Illustrated with diagrams and legends.",
+      "Easy-to-follow explanations for students.",
+      "Enhances understanding of world history."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+
+  {
+    "id": 26,
+    "name": "Wealth Building Secrets",
+    "image": "https://placehold.co/300?text=Wealth+Building",
+    "price": { "originalPrice": 950, "discountedPrice": 820 },
+    "category": "Investment",
+    "rating": 4.6,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Discover strategies to grow your wealth.",
+      "Investment tips for different age groups.",
+      "Includes real-life success stories.",
+      "Focus on both short-term and long-term gains.",
+      "Advice on managing financial risks."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 27,
+    "name": "Modern Investment Strategies",
+    "image": "https://placehold.co/300?text=Modern+Investment",
+    "price": { "originalPrice": 870, "discountedPrice": 750 },
+    "category": "Investment",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Focus on modern investment methods.",
+      "Covers stocks, bonds, and mutual funds.",
+      "Explains financial instruments with examples.",
+      "Helps understand market trends.",
+      "Tips for maximizing returns."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 28,
+    "name": "Financial Freedom Blueprint",
+    "image": "https://placehold.co/300?text=Financial+Freedom",
+    "price": { "originalPrice": 900, "discountedPrice": 770 },
+    "category": "Investment",
+    "rating": 4.8,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Guide to achieving financial independence.",
+      "Includes savings and investment strategies.",
+      "Real-life case studies included.",
+      "Tips for managing debt effectively.",
+      "Focus on wealth creation over time."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 29,
+    "name": "Beginner's Guide to Stock Market",
+    "image": "https://placehold.co/300?text=Stock+Market+Guide",
+    "price": { "originalPrice": 780, "discountedPrice": 650 },
+    "category": "Investment",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Step-by-step guide to investing in stocks.",
+      "Includes tips on selecting stocks.",
+      "Explains common financial terms.",
+      "Helps understand market behavior.",
+      "Focus on long-term investment strategies."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 30,
+    "name": "English Grammar Essentials",
+    "image": "https://placehold.co/300?text=English+Grammar",
+    "price": { "originalPrice": 500, "discountedPrice": 420 },
+    "category": "English",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Covers basic and advanced grammar rules.",
+      "Includes exercises for practice.",
+      "Helps improve writing skills.",
+      "Focus on correct sentence structure.",
+      "Tips to avoid common mistakes."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 31,
+    "name": "English Vocabulary Builder",
+    "image": "https://placehold.co/300?text=Vocabulary+Builder",
+    "price": { "originalPrice": 550, "discountedPrice": 470 },
+    "category": "English",
+    "rating": 4.6,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Expand your English vocabulary effectively.",
+      "Includes practical usage examples.",
+      "Focus on academic and everyday words.",
+      "Fun exercises to remember words.",
+      "Tips to improve language fluency."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 32,
+    "name": "English Literature Classics",
+    "image": "https://placehold.co/300?text=Literature+Classics",
+    "price": { "originalPrice": 650, "discountedPrice": 550 },
+    "category": "English",
+    "rating": 4.7,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Explore classic English novels and stories.",
+      "Includes summaries and analyses.",
+      "Focus on famous authors.",
+      "Helps improve comprehension.",
+      "Good for students and literature lovers."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 33,
+    "name": "English Writing Skills",
+    "image": "https://placehold.co/300?text=Writing+Skills",
+    "price": { "originalPrice": 600, "discountedPrice": 520 },
+    "category": "English",
+    "rating": 4.5,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Techniques to improve essay and letter writing.",
+      "Includes practice exercises.",
+      "Tips for professional and academic writing.",
+      "Helps structure content logically.",
+      "Guidance on proper grammar usage."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  },
+  {
+    "id": 34,
+    "name": "English Reading Comprehension",
+    "image": "https://placehold.co/300?text=Reading+Comprehension",
+    "price": { "originalPrice": 580, "discountedPrice": 500 },
+    "category": "English",
+    "rating": 4.4,
+    "isaddedinWishlist": false,
+    "bookDescription": [
+      "Improve your reading and understanding skills.",
+      "Includes passages and questions.",
+      "Focus on main ideas and details.",
+      "Practice summaries and interpretations.",
+      "Enhances vocabulary and comprehension."
+    ],
+    "returnPolicy": "30 days return available",
+    "cashOnDelivery": true,
+    "deliveryCharges": { "applicable": true, "charge": 50 }
+  }
+]
