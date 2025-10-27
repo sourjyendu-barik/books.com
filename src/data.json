@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Quantum Physics Simplified",
-    "image": "https://placehold.co/300?text=Quantum+Physics",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761558461/Gemini_Generated_Image_4wc0rs4wc0rs4wc0_w82ngu.png",
     "price": { "originalPrice": 850, "discountedPrice": 720 },
     "category": "Science",
     "rating": 4.5,
@@ -16,12 +16,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr Anya Sharma"
   },
   {
     "id": 2,
     "name": "Advanced Mathematics",
-    "image": "https://placehold.co/300?text=Advanced+Math",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761558082/Gemini_Generated_Image_8pxa8v8pxa8v8pxa_2_j6pfbs.png",
     "price": { "originalPrice": 900, "discountedPrice": 750 },
     "category": "Math",
     "rating": 4.7,
@@ -35,12 +36,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
+    "deliveryCharges": { "applicable": true, "charge": 40 },
+    "author": "Dr A Chen"
   },
   {
     "id": 3,
     "name": "Organic Chemistry Basics",
-    "image": "https://placehold.co/300?text=Organic+Chemistry",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761558629/Gemini_Generated_Image_6xc1ko6xc1ko6xc1_ot3wxp.png",
     "price": { "originalPrice": 700, "discountedPrice": 600 },
     "category": "Science",
     "rating": 4.4,
@@ -54,12 +56,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr Leo Chen"
   },
   {
     "id": 4,
     "name": "Introduction to Algebra",
-    "image": "https://placehold.co/300?text=Algebra",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761558751/Gemini_Generated_Image_fjeinifjeinifjei_oehb8x.png",
     "price": { "originalPrice": 500, "discountedPrice": 400 },
     "category": "Math",
     "rating": 4.1,
@@ -73,12 +76,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": false, "charge": 0 }
+    "deliveryCharges": { "applicable": false, "charge": 0 },
+    "author": "Dr Sarah Patel"
   },
   {
     "id": 5,
     "name": "Biology for Beginners",
-    "image": "https://placehold.co/300?text=Biology",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761560261/Gemini_Generated_Image_mb7l81mb7l81mb7l_b5kkny.png",
     "price": { "originalPrice": 600, "discountedPrice": 500 },
     "category": "Science",
     "rating": 4.2,
@@ -92,12 +96,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr. Evelyn Reed"
   },
   {
     "id": 6,
     "name": "Calculus Made Easy",
-    "image": "https://placehold.co/300?text=Calculus",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761560088/Gemini_Generated_Image_ibyz51ibyz51ibyz_mggmg3.png",
     "price": { "originalPrice": 800, "discountedPrice": 650 },
     "category": "Math",
     "rating": 4.6,
@@ -111,16 +116,17 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
+    "deliveryCharges": { "applicable": true, "charge": 40 },
+    "author": "Prof. David Chen"
   },
   {
     "id": 7,
     "name": "Modern Physics Explained",
-    "image": "https://placehold.co/300?text=Modern+Physics",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761561810/Gemini_Generated_Image_uhr0nauhr0nauhr0_azcfzl.png",
     "price": { "originalPrice": 900, "discountedPrice": 750 },
     "category": "Science",
-    "rating": 4.3,
     "isaddedinWishlist": false,
+    "rating": 4.6,
     "bookDescription": [
       "Covers relativity, quantum theory, and more.",
       "Includes easy explanations and diagrams.",
@@ -130,12 +136,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr Clara Vance"
   },
   {
     "id": 8,
     "name": "Linear Algebra Made Easy",
-    "image": "https://placehold.co/300?text=Linear+Algebra",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761562077/Gemini_Generated_Image_3wdub3wdub3wdub3_uzb7dn.png",
     "price": { "originalPrice": 780, "discountedPrice": 680 },
     "category": "Math",
     "rating": 4.5,
@@ -149,31 +156,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
+    "deliveryCharges": { "applicable": true, "charge": 40 },
+    "author": "Dr. Emily Carter"
   },
   {
     "id": 9,
-    "name": "Physics Problem Solver",
-    "image": "https://placehold.co/300?text=Physics+Problems",
-    "price": { "originalPrice": 850, "discountedPrice": 700 },
-    "category": "Science",
-    "rating": 4.6,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Provides solved physics problems with explanations.",
-      "Covers mechanics, optics, and thermodynamics.",
-      "Includes step-by-step problem-solving techniques.",
-      "Helps improve understanding and exam preparation.",
-      "Ideal for high school and college students."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 10,
     "name": "Probability and Statistics",
-    "image": "https://placehold.co/300?text=Statistics",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761562401/Gemini_Generated_Image_3sude53sude53sud_ikbr3n.png",
     "price": { "originalPrice": 800, "discountedPrice": 700 },
     "category": "Math",
     "rating": 4.4,
@@ -187,107 +176,14 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
+    "deliveryCharges": { "applicable": true, "charge": 40 },
+    "author": "Dr. Samuel Green"
   },
+
   {
-    "id": 11,
-    "name": "Environmental Science Today",
-    "image": "https://placehold.co/300?text=Env+Science",
-    "price": { "originalPrice": 650, "discountedPrice": 550 },
-    "category": "Science",
-    "rating": 4.2,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Explains environmental concepts and issues.",
-      "Covers pollution, climate change, and conservation.",
-      "Includes diagrams and case studies.",
-      "Easy to understand for students.",
-      "Promotes awareness about the environment."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 12,
-    "name": "Calculus Advanced",
-    "image": "https://placehold.co/300?text=Calculus+Advanced",
-    "price": { "originalPrice": 850, "discountedPrice": 720 },
-    "category": "Math",
-    "rating": 4.6,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Advanced calculus topics explained clearly.",
-      "Includes integrals, series, and multivariable calculus.",
-      "Step-by-step solved examples provided.",
-      "Ideal for college students.",
-      "Focuses on practical problem-solving."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
-  },
-  {
-    "id": 13,
-    "name": "Astronomy for Beginners",
-    "image": "https://placehold.co/300?text=Astronomy",
-    "price": { "originalPrice": 800, "discountedPrice": 680 },
-    "category": "Science",
-    "rating": 4.3,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Introduction to astronomy for beginners.",
-      "Covers planets, stars, and galaxies.",
-      "Includes diagrams and telescope guides.",
-      "Easy to understand for students.",
-      "Encourages curiosity about the universe."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 14,
-    "name": "Trigonometry Essentials",
-    "image": "https://placehold.co/300?text=Trigonometry",
-    "price": { "originalPrice": 500, "discountedPrice": 400 },
-    "category": "Math",
-    "rating": 4.2,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Covers basics of trigonometry functions.",
-      "Includes solved examples and exercises.",
-      "Easy explanations for beginners.",
-      "Helps in exam preparation and practice.",
-      "Useful for high school students."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
-  },
-  {
-    "id": 15,
-    "name": "Modern Chemistry",
-    "image": "https://placehold.co/300?text=Chemistry",
-    "price": { "originalPrice": 700, "discountedPrice": 600 },
-    "category": "Science",
-    "rating": 4.5,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Modern chemistry concepts explained simply.",
-      "Includes chemical reactions and equations.",
-      "Covers practical lab experiments.",
-      "Good for high school and college students.",
-      "Enhances understanding of chemical processes."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 16,
+    "id": 10,
     "name": "World History Simplified",
-    "image": "https://placehold.co/300?text=History",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761562776/Gemini_Generated_Image_khw48hkhw48hkhw4_dyuoxv.png",
     "price": { "originalPrice": 650, "discountedPrice": 550 },
     "category": "History",
     "rating": 4.3,
@@ -301,12 +197,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 45 }
+    "deliveryCharges": { "applicable": true, "charge": 45 },
+    "author": "Dr. Amelia Hayes"
   },
   {
-    "id": 17,
+    "id": 11,
     "name": "Ancient Civilizations",
-    "image": "https://placehold.co/300?text=Ancient+Civilizations",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761562975/Gemini_Generated_Image_3kajnb3kajnb3kaj_dmtufj.png",
     "price": { "originalPrice": 700, "discountedPrice": 600 },
     "category": "History",
     "rating": 4.4,
@@ -320,31 +217,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Prof. Julian Thorne"
   },
   {
-    "id": 18,
-    "name": "Medieval Europe",
-    "image": "https://placehold.co/300?text=Medieval+Europe",
-    "price": { "originalPrice": 680, "discountedPrice": 580 },
-    "category": "History",
-    "rating": 4.2,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Covers medieval European history and society.",
-      "Focuses on castles, knights, and kings.",
-      "Includes illustrations and timelines.",
-      "Easy-to-read format for students.",
-      "Highlights cultural and political events."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 45 }
-  },
-  {
-    "id": 19,
+    "id": 12,
     "name": "Modern World History",
-    "image": "https://placehold.co/300?text=Modern+History",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761563064/Gemini_Generated_Image_hie24phie24phie2_i1yyfs.png",
     "price": { "originalPrice": 720, "discountedPrice": 620 },
     "category": "History",
     "rating": 4.5,
@@ -358,12 +237,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr. Liam O'Connor"
   },
   {
-    "id": 20,
+    "id": 13,
     "name": "Geography Basics",
-    "image": "https://placehold.co/300?text=Geography+Basics",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761563450/Gemini_Generated_Image_rpyf2nrpyf2nrpyf_lrjxyj.png",
     "price": { "originalPrice": 600, "discountedPrice": 500 },
     "category": "Geography",
     "rating": 4.3,
@@ -377,31 +257,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
+    "deliveryCharges": { "applicable": true, "charge": 40 },
+    "author": "Dr. Marcus Reid"
   },
   {
-    "id": 21,
-    "name": "Human Geography",
-    "image": "https://placehold.co/300?text=Human+Geography",
-    "price": { "originalPrice": 650, "discountedPrice": 550 },
-    "category": "Geography",
-    "rating": 4.4,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Focuses on human population and settlements.",
-      "Covers cultures, economies, and cities.",
-      "Includes examples and case studies.",
-      "Easy-to-read format for students.",
-      "Highlights human-environment interaction."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 40 }
-  },
-  {
-    "id": 22,
+    "id": 14,
     "name": "Physical Geography",
-    "image": "https://placehold.co/300?text=Physical+Geography",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761563359/Gemini_Generated_Image_w2w01jw2w01jw2w0_vmapko.png",
     "price": { "originalPrice": 700, "discountedPrice": 600 },
     "category": "Geography",
     "rating": 4.5,
@@ -415,89 +277,33 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Prof. Chloe Evans"
   },
   {
-    "id": 23,
-    "name": "Geopolitics Today",
-    "image": "https://placehold.co/300?text=Geopolitics",
-    "price": { "originalPrice": 750, "discountedPrice": 650 },
-    "category": "Geography",
-    "rating": 4.3,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Explains modern geopolitical issues.",
-      "Includes case studies of countries.",
-      "Focuses on global politics and borders.",
-      "Easy explanations for students.",
-      "Helps understand world events."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 24,
+    "id": 15,
     "name": "Cultural Geography",
-    "image": "https://placehold.co/300?text=Cultural+Geography",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761563741/Gemini_Generated_Image_ti96wzti96wzti96_nzcyqo.png",
     "price": { "originalPrice": 680, "discountedPrice": 580 },
     "category": "Geography",
     "rating": 4.2,
     "isaddedinWishlist": false,
     "bookDescription": [
-      "Explores cultures and human activities.",
-      "Includes traditions, languages, and religions.",
-      "Illustrated with maps and charts.",
-      "Easy to understand for students.",
-      "Enhances knowledge about global cultures."
+      "Modern chemistry concepts explained simply.",
+      "Includes chemical reactions and equations.",
+      "Covers practical lab experiments.",
+      "Good for high school and college students.",
+      "Enhances understanding of chemical processes."
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 45 }
+    "deliveryCharges": { "applicable": true, "charge": 45 },
+    "author": "Dr. Isabella Cole"
   },
   {
-    "id": 25,
-    "name": "Historical Maps Guide",
-    "image": "https://placehold.co/300?text=Historical+Maps",
-    "price": { "originalPrice": 700, "discountedPrice": 600 },
-    "category": "History",
-    "rating": 4.4,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Includes maps from ancient to modern times.",
-      "Explains historical boundaries and empires.",
-      "Illustrated with diagrams and legends.",
-      "Easy-to-follow explanations for students.",
-      "Enhances understanding of world history."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-
-  {
-    "id": 26,
-    "name": "Wealth Building Secrets",
-    "image": "https://placehold.co/300?text=Wealth+Building",
-    "price": { "originalPrice": 950, "discountedPrice": 820 },
-    "category": "Investment",
-    "rating": 4.6,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Discover strategies to grow your wealth.",
-      "Investment tips for different age groups.",
-      "Includes real-life success stories.",
-      "Focus on both short-term and long-term gains.",
-      "Advice on managing financial risks."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 27,
+    "id": 16,
     "name": "Modern Investment Strategies",
-    "image": "https://placehold.co/300?text=Modern+Investment",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761564547/Gemini_Generated_Image_a33pbba33pbba33p_ifgupn.png",
     "price": { "originalPrice": 870, "discountedPrice": 750 },
     "category": "Investment",
     "rating": 4.5,
@@ -511,12 +317,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Robert Kiyosaki"
   },
   {
-    "id": 28,
+    "id": 17,
     "name": "Financial Freedom Blueprint",
-    "image": "https://placehold.co/300?text=Financial+Freedom",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761564637/Gemini_Generated_Image_iqc54biqc54biqc5_i7tdqt.png",
     "price": { "originalPrice": 900, "discountedPrice": 770 },
     "category": "Investment",
     "rating": 4.8,
@@ -530,31 +337,14 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr. Alistair Finch"
   },
+
   {
-    "id": 29,
-    "name": "Beginner's Guide to Stock Market",
-    "image": "https://placehold.co/300?text=Stock+Market+Guide",
-    "price": { "originalPrice": 780, "discountedPrice": 650 },
-    "category": "Investment",
-    "rating": 4.4,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Step-by-step guide to investing in stocks.",
-      "Includes tips on selecting stocks.",
-      "Explains common financial terms.",
-      "Helps understand market behavior.",
-      "Focus on long-term investment strategies."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 30,
+    "id": 18,
     "name": "English Grammar Essentials",
-    "image": "https://placehold.co/300?text=English+Grammar",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761564781/Gemini_Generated_Image_ugqxjugqxjugqxju_qtdiz6.png",
     "price": { "originalPrice": 500, "discountedPrice": 420 },
     "category": "English",
     "rating": 4.5,
@@ -568,12 +358,13 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Prof. Eleanor Vance"
   },
   {
-    "id": 31,
+    "id": 19,
     "name": "English Vocabulary Builder",
-    "image": "https://placehold.co/300?text=Vocabulary+Builder",
+    "image": "https://res.cloudinary.com/dmmjwiuz7/image/upload/v1761564959/Gemini_Generated_Image_2bzmab2bzmab2bzm_pwnolo.png",
     "price": { "originalPrice": 550, "discountedPrice": 470 },
     "category": "English",
     "rating": 4.6,
@@ -587,63 +378,7 @@
     ],
     "returnPolicy": "30 days return available",
     "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 32,
-    "name": "English Literature Classics",
-    "image": "https://placehold.co/300?text=Literature+Classics",
-    "price": { "originalPrice": 650, "discountedPrice": 550 },
-    "category": "English",
-    "rating": 4.7,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Explore classic English novels and stories.",
-      "Includes summaries and analyses.",
-      "Focus on famous authors.",
-      "Helps improve comprehension.",
-      "Good for students and literature lovers."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 33,
-    "name": "English Writing Skills",
-    "image": "https://placehold.co/300?text=Writing+Skills",
-    "price": { "originalPrice": 600, "discountedPrice": 520 },
-    "category": "English",
-    "rating": 4.5,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Techniques to improve essay and letter writing.",
-      "Includes practice exercises.",
-      "Tips for professional and academic writing.",
-      "Helps structure content logically.",
-      "Guidance on proper grammar usage."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
-  },
-  {
-    "id": 34,
-    "name": "English Reading Comprehension",
-    "image": "https://placehold.co/300?text=Reading+Comprehension",
-    "price": { "originalPrice": 580, "discountedPrice": 500 },
-    "category": "English",
-    "rating": 4.4,
-    "isaddedinWishlist": false,
-    "bookDescription": [
-      "Improve your reading and understanding skills.",
-      "Includes passages and questions.",
-      "Focus on main ideas and details.",
-      "Practice summaries and interpretations.",
-      "Enhances vocabulary and comprehension."
-    ],
-    "returnPolicy": "30 days return available",
-    "cashOnDelivery": true,
-    "deliveryCharges": { "applicable": true, "charge": 50 }
+    "deliveryCharges": { "applicable": true, "charge": 50 },
+    "author": "Dr. Julian Reed"
   }
 ]

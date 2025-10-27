@@ -6,6 +6,8 @@ export default function BooksProvider({ children }) {
   const [bookslist, setBooksList] = useState(books);
   const [wishlist, setWishlist] = useLocalstorage("wishlist", []);
   const [cartitems, setcartitems] = useLocalstorage("cartItems", []);
+  const [currentAddress, setCurrentAdress] = useState(null);
+
   // const [total, setTotal] = useState([{total}]);
   const [filters, setFilters] = useState({
     category: [],
@@ -196,6 +198,8 @@ export default function BooksProvider({ children }) {
     setOrders,
     setAddress,
     setcartitems,
+    currentAddress,
+    setCurrentAdress,
   };
   return <BookContext.Provider value={value}>{children}</BookContext.Provider>;
 }

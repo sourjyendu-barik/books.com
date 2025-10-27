@@ -74,6 +74,30 @@ const Filter = () => {
         checked={filters.category.includes("Science")}
         handleFilter={handleCategory}
       />
+      <Checkbox
+        label="History"
+        name="category"
+        checked={filters.category.includes("History")}
+        handleFilter={handleCategory}
+      />
+      <Checkbox
+        label="Geography"
+        name="category"
+        checked={filters.category.includes("Geography")}
+        handleFilter={handleCategory}
+      />
+      <Checkbox
+        label="Investment"
+        name="category"
+        checked={filters.category.includes("Investment")}
+        handleFilter={handleCategory}
+      />
+      <Checkbox
+        label="English"
+        name="category"
+        checked={filters.category.includes("English")}
+        handleFilter={handleCategory}
+      />
 
       <h6 className="mt-2">Rating</h6>
       {/* <RadioButton label="4 star and above" name="rating" />

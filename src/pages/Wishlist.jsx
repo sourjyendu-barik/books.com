@@ -8,11 +8,11 @@ const Wishlist = () => {
     <div>
       <Navbar />
       <section className="p-3">
+        <h1 className="text-center">Wish List</h1>
         <div className="container">
           {wishlist.length === 0 && <h2>There are no items in wishlist</h2>}
           {wishlist.length > 0 && (
             <>
-              <h2 className="text-center">My Wishlist</h2>
               <div className="row">
                 {wishlist.map((book) => (
                   <Product

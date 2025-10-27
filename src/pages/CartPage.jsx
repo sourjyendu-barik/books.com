@@ -16,13 +16,10 @@ const CartPage = () => {
   const discount = cartitems.reduce((accu, curr) => {
     accu +=
       (curr.price.originalPrice - curr.price.discountedPrice) * curr.count;
-    //    price: { originalPrice: 760, discountedPrice: 610 },
     return accu;
   }, 0);
 
   const d_charge = cartitems.reduce((accu, curr) => {
-    // accu += curr.deliveryCharges.applicable && curr.deliveryCharges.charge;
-    //    deliveryCharges: { applicable: true, charge: 100 },
     if (curr.deliveryCharges.applicable) {
       accu += curr.deliveryCharges.charge;
     }
@@ -39,12 +36,12 @@ const CartPage = () => {
   return (
     <div>
       <Navbar />
+      <h1 className="text-center">My Cart</h1>
       {cartitems.length === 0 && (
         <h2 className="text-center m-5">There are no items in the cart.</h2>
       )}
       {cartitems && cartitems.length > 0 && (
         <main>
-          <h1 className="text-center">My Cart({totalitem})</h1>
           <div className="container">
             {/* divide to container */}
             <div className="row">

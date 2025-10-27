@@ -23,10 +23,15 @@ const AddressModal = ({ currentAddress_id, onClose }) => {
     onClose();
   };
   const handleClose = () => onClose();
+  console.log("adress modal running");
   return (
     <div
-      className="modal show fade"
-      style={{ display: "block", backgroundColor: "rgba(0,0,0,0.5)" }}
+      className="modal d-block"
+      style={{
+        backgroundColor: "rgba(0,0,0,0.5)",
+        backdropFilter: "blur(2px)",
+        zIndex: 1055, // same as Bootstrap modal level
+      }}
     >
       <div className="modal-dialog">
         <div className="modal-content">
