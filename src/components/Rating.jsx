@@ -2,7 +2,7 @@ import React from "react";
 import { Star, StarHalf } from "lucide-react";
 const Rating = ({ rating }) => {
   const r = Number(rating);
-  console.log(r);
+  // console.log(r);
   const fullstar = Math.floor(r);
   const half = r % 1 !== 0;
   // const empty = 5 - (fullstar + (half ? 1 : 0));
