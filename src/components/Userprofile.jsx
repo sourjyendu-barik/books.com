@@ -148,6 +148,7 @@ const Userprofile = () => {
                       <p>Discount: ₹{o.discount}</p>
                       <p>Delivery: ₹{o.d_charge}</p>
                       <p className="fw-semibold">Payable: ₹{o.totalAmt}</p>
+                      <p>Date: {o.orderDate}</p>
                     </div>
                   </div>
                 </div>

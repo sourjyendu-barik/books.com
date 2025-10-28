@@ -30,7 +30,7 @@ const CartPage = () => {
   const navigate = useNavigate();
   const handlePlaceOrder = () => {
     navigate("/checkout", {
-      state: { totalitem, total, discount, d_charge, totalAmt },
+      state: { totalitem, total, discount, d_charge, totalAmt, cartitems },
     });
   };
   return (

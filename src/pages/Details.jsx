@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Price from "../components/Price";
-import { useParams } from "react-router";
+import { useNavigate, useParams } from "react-router";
 import { useBookContext } from "../context/BookContext";
 import { Heart, Truck, RotateCcw, CreditCard } from "lucide-react";
 import Rating from "../components/Rating";
@@ -20,7 +20,17 @@ const Details = () => {
       if (alike_booklist.length === 4) break;
     }
   }
+  const navigate = useNavigate();
+  const handleBuyNow = (book) => {
+    const bookWithCount = { ...book, count: 1 };
 
+    navigate("/checkout", {
+      state: {
+        from: "details",
+        bookWithCount,
+      },
+    });
+  };
   return (
     <div>
       <Navbar />
@@ -73,7 +83,10 @@ const Details = () => {
                   </div>
 
                   <div className="p-3">
-                    <button className="btn btn-primary w-100 rounded-3 mb-2">
+                    <button
+                      className="btn btn-primary w-100 rounded-3 mb-2"
+                      onClick={() => handleBuyNow(book)}
+                    >
                       Buy Now
                     </button>
                     <button

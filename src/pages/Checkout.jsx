@@ -6,25 +6,63 @@ import Modal from "../components/Modal";
 import Address from "../components/Address";
 const Checkout = () => {
   const location = useLocation();
-  const { setOrders, setcartitems, cartitems, currentAddress } =
-    useBookContext();
+  const { setOrders, setcartitems, currentAddress } = useBookContext();
   const [showModel, setShowModel] = useState(false);
-  const { totalitem, total, discount, d_charge, totalAmt } =
-    location.state || {};
+  const {
+    from,
+    bookWithCount: book,
+    totalitem,
+    total,
+    discount,
+    d_charge,
+    totalAmt,
+    cartitems = [],
+  } = location.state || {};
 
+  //if checkout comes from card directly
+  const singleBookSummary = book
+    ? {
+        totalitem: 1,
+        total: book.price.originalPrice,
+        discount: book.price.originalPrice - book.price.discountedPrice,
+        d_charge: book.deliveryCharges.applicable
+          ? book.deliveryCharges.charge
+          : 0,
+        totalAmt:
+          book.price.discountedPrice +
+          (book.deliveryCharges.applicable ? book.deliveryCharges.charge : 0),
+      }
+    : {};
+
+  //which summaray to use
+  const summaray =
+    from === "details"
+      ? singleBookSummary
+      : { totalitem, total, discount, d_charge, totalAmt };
+
+  ///items to show in table we use a [book] in xase of multiple items it should go throug map method
+
+  const itemsToDisplayed = from === "details" ? [book] : cartitems;
+  //handler for order
   const handleOrder = (e) => {
     e.preventDefault();
 
     if (!currentAddress) {
       return;
     }
-
+    const orderDate = new Date().toLocaleString("en-IN", {
+      day: "2-digit",
+      month: "short",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
     setOrders((prev) => [
       ...prev,
-      { totalitem, total, discount, d_charge, totalAmt, currentAddress },
+      { ...summaray, currentAddress, items: itemsToDisplayed, orderDate },
     ]);
-
-    setcartitems([]);
+    if (from !== "details") setcartitems([]);
 
     setShowModel(true);
     setTimeout(() => {
@@ -48,22 +86,24 @@ const Checkout = () => {
                 <ul className="list-unstyled mb-0">
                   <li className="mb-2">
                     <span className="fw-semibold">Total Items:</span>{" "}
-                    {totalitem}
+                    {summaray.totalitem}
                   </li>
                   <li className="mb-2">
-                    <span className="fw-semibold">Total:</span> ₹{total}
+                    <span className="fw-semibold">Total:</span> ₹
+                    {summaray.total}
                   </li>
                   <li className="mb-2">
-                    <span className="fw-semibold">Discount:</span> ₹{discount}
+                    <span className="fw-semibold">Discount:</span> ₹
+                    {summaray.discount}
                   </li>
                   <li className="mb-2">
                     <span className="fw-semibold">Delivery Charges:</span> ₹
-                    {d_charge}
+                    {summaray.d_charge}
                   </li>
                 </ul>
                 <hr />
                 <h4 className="text-success text-center fw-bold mt-3">
-                  Total Payable: ₹{totalAmt}
+                  Total Payable: ₹{summaray.totalAmt}
                 </h4>
               </div>
             </div>
@@ -76,22 +116,33 @@ const Checkout = () => {
                 <h5 className="h5 mb-3 text-center text-secondary">
                   Your Items
                 </h5>
-                <table className="table table-striped align-middle">
-                  <thead className="table-light">
-                    <tr>
-                      <th>Product Name</th>
-                      <th className="text-center">Quantity</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {cartitems.map((item, index) => (
-                      <tr key={`${item.name}${index}`}>
-                        <td>{item.name}</td>
-                        <td className="text-center">{item.count}</td>
+
+                <div style={{ maxHeight: "250px", overflowY: "auto" }}>
+                  <table className="table table-striped align-middle mb-0">
+                    <thead className="table-light sticky-top">
+                      <tr>
+                        <th>Product Name</th>
+                        <th className="text-center">Quantity</th>
                       </tr>
-                    ))}
-                  </tbody>
-                </table>
+                    </thead>
+                    <tbody>
+                      {itemsToDisplayed.length > 0 ? (
+                        itemsToDisplayed.map((item, index) => (
+                          <tr key={`${item.name}${index}`}>
+                            <td>{item.name}</td>
+                            <td className="text-center">{item.count}</td>
+                          </tr>
+                        ))
+                      ) : (
+                        <tr>
+                          <td colSpan="2" className="text-center text-muted">
+                            No items to display
+                          </td>
+                        </tr>
+                      )}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </div>
