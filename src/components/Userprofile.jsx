@@ -33,24 +33,22 @@ const Userprofile = () => {
   return (
     <div>
       <Navbar />
-
       <main className="container py-4">
-        {/* Section 1: Personal Details + Add Address */}
+        {/* PERSONAL DETAILS + ADD ADDRESS */}
         <section className="row g-3 mb-4">
-          {/* Personal Details */}
           <div className="col-md-6">
             <div className="card shadow-sm border-0 h-100">
               <div className="card-body">
                 <h3 className="mb-3 text-secondary border-bottom pb-2">
                   Personal Details
                 </h3>
-                <p className="mb-2">
+                <p>
                   <strong>Name:</strong> Sourjyendu Barik
                 </p>
-                <p className="mb-2">
+                <p>
                   <strong>Email:</strong> sourjyendu@1234.com
                 </p>
-                <p className="mb-2">
+                <p>
                   <strong>Phone:</strong> 9876543210
                 </p>
                 <p className="mb-0">
@@ -61,7 +59,6 @@ const Userprofile = () => {
             </div>
           </div>
 
-          {/* Add Address */}
           <div className="col-md-6">
             <div className="card shadow-sm border-0 h-100">
               <div className="card-body">
@@ -127,33 +124,83 @@ const Userprofile = () => {
           </div>
         </section>
 
-        {/* Section 2: Address List */}
+        {/* ADDRESS LIST */}
         <section className="mb-4">
           <Address />
         </section>
 
-        {/* Section 3: Previous Orders */}
+        {/* PREVIOUS ORDERS */}
         {orders.length > 0 && (
           <section>
-            <h3 className="text-center text-secondary mb-3 border-bottom pb-2">
+            <h3 className="text-center text-secondary mb-4 border-bottom pb-2">
               Previous Orders
             </h3>
-            <div className="row g-3">
-              {orders.map((o, index) => (
-                <div className="col-md-4" key={`order${index}`}>
-                  <div className="card shadow-sm border-0 h-100">
-                    <div className="card-body">
-                      <p className="fw-bold">Total Items: {o.totalitem}</p>
-                      <p>Total: ₹{o.total}</p>
-                      <p>Discount: ₹{o.discount}</p>
-                      <p>Delivery: ₹{o.d_charge}</p>
-                      <p className="fw-semibold">Payable: ₹{o.totalAmt}</p>
-                      <p>Date: {o.orderDate}</p>
+
+            {orders.map((o, index) => (
+              <div
+                className="card shadow-sm border-0 mb-3 p-3"
+                key={`order${index}`}
+              >
+                <div className="row g-3">
+                  {/* LEFT SIDE */}
+                  <div className="col-md-4 col-12">
+                    <div className="border rounded p-3 h-100 bg-light">
+                      <h6 className="text-primary fw-semibold mb-2">
+                        🧾 Order ID: {o.orderId || `#ORD${index + 1}`}
+                      </h6>
+                      <p className="mb-1">
+                        <strong>Date:</strong> {o.orderDate}
+                      </p>
+                      <p className="mb-1">
+                        <strong>Total Items:</strong> {o.totalitem}
+                      </p>
+                      <p className="mb-1">Total: ₹{o.total}</p>
+                      <p className="mb-1">Discount: ₹{o.discount}</p>
+                      <p className="mb-1">Delivery: ₹{o.d_charge}</p>
+                      <p className="fw-semibold text-success mt-2">
+                        Payable: ₹{o.totalAmt}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* RIGHT SIDE */}
+                  <div className="col-md-8 col-12">
+                    <div
+                      className="border rounded p-2 bg-white"
+                      style={{ maxHeight: "250px", overflowY: "auto" }}
+                    >
+                      <table className="table table-striped align-middle mb-0">
+                        <thead className="table-light sticky-top">
+                          <tr>
+                            <th>Product Name</th>
+                            <th className="text-center">Quantity</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {o.items?.length > 0 ? (
+                            o.items.map((item, idx) => (
+                              <tr key={`${item.name}${idx}`}>
+                                <td>{item.name}</td>
+                                <td className="text-center">{item.count}</td>
+                              </tr>
+                            ))
+                          ) : (
+                            <tr>
+                              <td
+                                colSpan="2"
+                                className="text-center text-muted"
+                              >
+                                No items to display
+                              </td>
+                            </tr>
+                          )}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </section>
         )}
 

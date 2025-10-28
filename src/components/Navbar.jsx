@@ -24,14 +24,27 @@ const Navbar = () => {
           <i>Book.com</i>
         </NavLink>
 
-        {/* Hamburger for mobile */}
-        <button
-          className="navbar-toggler border-0"
-          type="button"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          <Menu size={24} />
-        </button>
+        {/* Right side icons (always visible) */}
+        <div className="d-flex align-items-center gap-3 d-lg-none">
+          <NavLink to="/wishlist" className="text-dark">
+            <Wishcount />
+          </NavLink>
+          <NavLink to="/cartpage" className="text-dark">
+            <Cart />
+          </NavLink>
+          <NavLink to="/useprofile" className="text-dark">
+            <User />
+          </NavLink>
+
+          {/* Hamburger for mobile */}
+          <button
+            className="navbar-toggler border-0"
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <Menu size={24} />
+          </button>
+        </div>
 
         {/* Collapsible content */}
         <div className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}>
@@ -46,8 +59,8 @@ const Navbar = () => {
             />
           </div>
 
-          {/* Right side */}
-          <div className="d-flex align-items-center justify-content-end gap-5 mt-2 mt-lg-0 ms-lg-3">
+          {/* Right side (desktop only) */}
+          <div className="d-none d-lg-flex align-items-center justify-content-end gap-4 ms-3">
             <button className="btn btn-secondary rounded-0 px-3 py-1">
               Login
             </button>

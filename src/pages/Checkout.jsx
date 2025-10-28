@@ -48,8 +48,13 @@ const Checkout = () => {
     e.preventDefault();
 
     if (!currentAddress) {
+      setShowModel(true);
+      setTimeout(() => {
+        setShowModel(false);
+      }, 1500);
       return;
     }
+
     const orderDate = new Date().toLocaleString("en-IN", {
       day: "2-digit",
       month: "short",
@@ -163,7 +168,12 @@ const Checkout = () => {
         </div>
       </main>
 
-      <Modal show={showModel} message="Order placed successfully." />
+      <Modal
+        show={showModel}
+        message={
+          currentAddress ? "Order Placed successfully" : "Select an address"
+        }
+      />
     </div>
   );
 };
