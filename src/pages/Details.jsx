@@ -93,7 +93,7 @@ const Details = () => {
                             right: "1rem",
                             cursor: "pointer",
                           }}
-                          onClick={() => toggleWishlist(book)}
+                          onClick={() => toggleWishlist(data.data.product)}
                         >
                           <Heart
                             fill={
@@ -108,13 +108,13 @@ const Details = () => {
                       <div className="p-3">
                         <button
                           className="btn btn-primary w-100 rounded-3 mb-2"
-                          onClick={() => handleBuyNow(book)}
+                          onClick={() => handleBuyNow(data.data.product)}
                         >
                           Buy Now
                         </button>
                         <button
                           className="btn btn-outline-secondary w-100 rounded-3"
-                          onClick={() => addtoCart(book)}
+                          onClick={() => addtoCart(data.data.product)}
                         >
                           Add to Cart
                         </button>
