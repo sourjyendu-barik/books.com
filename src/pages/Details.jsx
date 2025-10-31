@@ -10,7 +10,7 @@ import useFetch from "../hooks/useFetch";
 import { useMemo } from "react";
 const Details = () => {
   const { bookId } = useParams();
-  const { bookslist, toggleWishlist, addtoCart } = useBookContext();
+  const { bookslist, toggleWishlist, addtoCart, wishlist } = useBookContext();
 
   const { data, loading, error } = useFetch(
     `https://books-com-backend.vercel.app/api/products/${bookId}`
@@ -97,7 +97,9 @@ const Details = () => {
                         >
                           <Heart
                             fill={
-                              data.data.product.isaddedinWhislist
+                              wishlist.some(
+                                (item) => item._id === data.data.product._id //modified
+                              )
                                 ? "red"
                                 : "white"
                             }
