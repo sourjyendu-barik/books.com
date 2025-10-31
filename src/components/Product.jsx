@@ -6,7 +6,6 @@ import Rating from "./Rating";
 
 const Product = ({ book, buttonLabel, buttonFunction }) => {
   const { toggleWishlist } = useBookContext();
-
   return (
     // 🟢 CHANGE: Ensure consistent card size with "h-100" and same height grid columns
     <div className="col-md-3 col-sm-6 mb-4 d-flex">
@@ -26,7 +25,7 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
       >
         {/* 🟢 CHANGE: Fixed image height for identical card sizes */}
         <div className="overflow-hidden" style={{ height: "250px" }}>
-          <Link to={`/booklisting/details/${book.id}`}>
+          <Link to={`/booklisting/details/${book._id}`}>
             <img
               src={book.image}
               alt={book.name}

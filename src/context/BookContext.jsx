@@ -1,14 +1,29 @@
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 const BookContext = createContext();
-import books from "../data.json";
 import useLocalstorage from "../hooks/useLocalstorage";
+import useFetch from "../hooks/useFetch";
+
 export default function BooksProvider({ children }) {
-  const [bookslist, setBooksList] = useState(books);
+  const { data, loading, error } = useFetch(
+    "https://books-com-backend.vercel.app/api/products"
+  );
+  const [bookslist, setBooksList] = useState([]);
   const [wishlist, setWishlist] = useLocalstorage("wishlist", []);
   const [cartitems, setcartitems] = useLocalstorage("cartItems", []);
   const [currentAddress, setCurrentAdress] = useState(null);
 
-  // const [total, setTotal] = useState([{total}]);
+  //   Addrd this effect to load fetched data into bookslist
+  useEffect(() => {
+    if (!data?.data?.products) return;
+
+    setBooksList(
+      data.data.products.map((book) => ({
+        ...book,
+        isaddedinWhislist: wishlist.some((w) => w.id === book.id),
+      }))
+    );
+  }, [data, wishlist]);
+
   const [filters, setFilters] = useState({
     category: [],
     rating: null,
@@ -16,34 +31,30 @@ export default function BooksProvider({ children }) {
     sort: null,
     bookname: "",
   });
+
   const [orders, setOrders] = useLocalstorage("orders", []);
   const [address, setAddress] = useLocalstorage("addressList", [
     {
       address_id: 1,
       house: "456house",
-      dist: "Cutttuck",
+      dist: "Cuttack",
       state: "Odisha",
       pin: "700001",
     },
   ]);
-  //1
+
   const updateFilter = (filterName, value) => {
     setFilters((prev) => ({
       ...prev,
       [filterName]: value,
     }));
   };
-  //2
 
-  //wishlist operation
+  //  Wishlist
   const toggleWishlist = (book) => {
-    const updatedBooks = bookslist.map((b) => {
-      if (b.id === book.id) {
-        return { ...b, isaddedinWhislist: !b.isaddedinWhislist };
-      } else {
-        return b;
-      }
-    });
+    const updatedBooks = bookslist.map((b) =>
+      b.id === book.id ? { ...b, isaddedinWhislist: !b.isaddedinWhislist } : b
+    );
     setBooksList(updatedBooks);
 
     setWishlist((prev) => {
@@ -56,31 +67,27 @@ export default function BooksProvider({ children }) {
       }
     });
   };
-  //3
+
+  //  Filtering
   const filteredBooks = useMemo(() => {
-    let filteredBooksarray = [...bookslist];
+    let filtered = [...bookslist];
     if (filters.category.length > 0) {
-      filteredBooksarray = filteredBooksarray.filter((b) =>
-        filters.category.includes(b.category)
-      );
+      filtered = filtered.filter((b) => filters.category.includes(b.category));
     }
     if (filters.price) {
-      filteredBooksarray = filteredBooksarray.filter(
+      filtered = filtered.filter(
         (b) => b.price.discountedPrice <= filters.price
       );
     }
     if (filters.rating) {
-      filteredBooksarray = filteredBooksarray.filter(
-        (b) => b.rating >= filters.rating
-      );
+      filtered = filtered.filter((b) => b.rating >= filters.rating);
     }
     if (filters.bookname) {
-      filteredBooksarray = filteredBooksarray.filter((b) =>
+      filtered = filtered.filter((b) =>
         b.name.toLowerCase().includes(filters.bookname.toLowerCase())
       );
     }
-
-    return filteredBooksarray;
+    return filtered;
   }, [
     bookslist,
     filters.category,
@@ -88,58 +95,47 @@ export default function BooksProvider({ children }) {
     filters.rating,
     filters.bookname,
   ]);
-  //console.log(`filtered books is ${filteredBooks}`);
-  const sortedBooks = useMemo(() => {
-    let booksarr = [...filteredBooks];
-    if (filters.sort === "lowtohigh") {
-      booksarr.sort(
-        (a, b) => a.price.discountedPrice - b.price.discountedPrice
-      );
-    } else if (filters.sort === "hightolow") {
-      booksarr.sort(
-        (a, b) => b.price.discountedPrice - a.price.discountedPrice
-      );
-    }
-    return booksarr;
-  }, [filteredBooks, filters.sort]);
-  //
 
-  //cart operation
+  //  Sorting
+  const sortedBooks = useMemo(() => {
+    const arr = [...filteredBooks];
+    if (filters.sort === "lowtohigh") {
+      arr.sort((a, b) => a.price.discountedPrice - b.price.discountedPrice);
+    } else if (filters.sort === "hightolow") {
+      arr.sort((a, b) => b.price.discountedPrice - a.price.discountedPrice);
+    }
+    return arr;
+  }, [filteredBooks, filters.sort]);
+
+  //  Cart operations
   const addtoCart = (book) => {
     setcartitems((prev) => {
-      const exist = prev.find((b) => b.name === book.name);
-      let updatedCart;
+      const exist = prev.find((b) => b.id === book.id);
       if (exist) {
-        updatedCart = prev.map((b) =>
-          b.name === book.name ? { ...b, count: b.count + 1 } : b
+        return prev.map((b) =>
+          b.id === book.id ? { ...b, count: b.count + 1 } : b
         );
-      } else {
-        updatedCart = [...prev, { ...book, count: 1 }];
       }
-
-      return updatedCart;
+      return [...prev, { ...book, count: 1 }];
     });
   };
+
   const addItemCount = (book_id) => {
-    setcartitems((prev) => {
-      const updatedCartlist = prev.map((b) =>
-        b.id === book_id ? { ...b, count: b.count + 1 } : b
-      );
-
-      return updatedCartlist;
-    });
+    setcartitems((prev) =>
+      prev.map((b) => (b.id === book_id ? { ...b, count: b.count + 1 } : b))
+    );
   };
+
   const decreaseItemCount = (book_id) => {
-    setcartitems((prev) => {
-      const updatedCartlist = prev
+    setcartitems((prev) =>
+      prev
         .map((b) => (b.id === book_id ? { ...b, count: b.count - 1 } : b))
-        .filter((b) => b.count > 0);
-
-      return updatedCartlist;
-    });
+        .filter((b) => b.count > 0)
+    );
   };
+
   const removeFromCart = (book_id) => {
-    setcartitems((prev) => prev.filter((book) => book.id !== book_id));
+    setcartitems((prev) => prev.filter((b) => b.id !== book_id));
   };
 
   const moveToCart = (book) => {
@@ -148,36 +144,22 @@ export default function BooksProvider({ children }) {
         b.id === book.id ? { ...b, isaddedinWhislist: false } : b
       )
     );
-
     setWishlist((prev) => prev.filter((b) => b.id !== book.id));
-
     addtoCart(book);
   };
-
+  //Wishlist  operation
   const moveToWishlist = (book) => {
     removeFromCart(book.id);
-
     setBooksList((prev) =>
       prev.map((b) =>
         b.id === book.id ? { ...b, isaddedinWhislist: true } : b
       )
     );
-
     setWishlist((prev) => {
       const exist = prev.some((b) => b.id === book.id);
       return exist ? prev : [...prev, { ...book, isaddedinWhislist: true }];
     });
   };
-
-  // Sync wishlist state with book list on load or when wishlist changes
-  useEffect(() => {
-    setBooksList((prevBooks) =>
-      prevBooks.map((book) => ({
-        ...book,
-        isaddedinWhislist: wishlist.some((w) => w.id === book.id),
-      }))
-    );
-  }, [wishlist]);
 
   const value = {
     address,
@@ -200,7 +182,11 @@ export default function BooksProvider({ children }) {
     setcartitems,
     currentAddress,
     setCurrentAdress,
+    data,
+    loading,
+    error,
   };
+
   return <BookContext.Provider value={value}>{children}</BookContext.Provider>;
 }
 

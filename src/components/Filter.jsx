@@ -2,8 +2,12 @@ import React from "react";
 import Checkbox from "./Checkbox";
 import RadioButton from "./RadioButton";
 import { useBookContext } from "../context/BookContext";
+import useFetch from "../hooks/useFetch";
 const Filter = () => {
   const { filters, updateFilter } = useBookContext();
+  const { data, loading, error } = useFetch(
+    "https://books-com-backend.vercel.app/api/categories"
+  );
   const clearFilters = () => {
     updateFilter("category", []);
     updateFilter("rating", null);
@@ -62,48 +66,23 @@ const Filter = () => {
       </div>
 
       <h6 className="mt-2">Category</h6>
-      <Checkbox
-        label="Math"
-        name="category"
-        checked={filters.category.includes("Math")}
-        handleFilter={handleCategory}
-      />
-      <Checkbox
-        label="Science"
-        name="category"
-        checked={filters.category.includes("Science")}
-        handleFilter={handleCategory}
-      />
-      <Checkbox
-        label="History"
-        name="category"
-        checked={filters.category.includes("History")}
-        handleFilter={handleCategory}
-      />
-      <Checkbox
-        label="Geography"
-        name="category"
-        checked={filters.category.includes("Geography")}
-        handleFilter={handleCategory}
-      />
-      <Checkbox
-        label="Investment"
-        name="category"
-        checked={filters.category.includes("Investment")}
-        handleFilter={handleCategory}
-      />
-      <Checkbox
-        label="English"
-        name="category"
-        checked={filters.category.includes("English")}
-        handleFilter={handleCategory}
-      />
+      {loading && <p>Loading Category</p>}
+      {error && <p>Error while loading category</p>}
+      {data &&
+        data.data &&
+        data.data.categories.length > 0 &&
+        data.data.categories.map((c, index) => (
+          <Checkbox
+            label={c}
+            key={`category${index}`}
+            name="category"
+            checked={filters.category.includes(c)}
+            handleFilter={handleCategory}
+          />
+        ))}
 
       <h6 className="mt-2">Rating</h6>
-      {/* <RadioButton label="4 star and above" name="rating" />
-      <RadioButton label="3 star and above" name="rating" />
-      <RadioButton label="2 star and above" name="rating" />
-      <RadioButton label="1 star and above" name="rating" /> */}
+
       {[4, 3, 2, 1].map((star) => {
         return (
           <RadioButton

@@ -6,7 +6,8 @@ import Filter from "../components/Filter";
 import Modal from "../components/Modal";
 import { useParams } from "react-router";
 const BookListing = () => {
-  const { sortedBooks, addtoCart, filters, updateFilter } = useBookContext();
+  const { sortedBooks, addtoCart, filters, updateFilter, loading, error } =
+    useBookContext();
   const { bookCategory } = useParams();
   const [showModel, setShowmodel] = useState(false);
   const handleAddtoCart = (book) => {
@@ -26,8 +27,6 @@ const BookListing = () => {
       updateFilter("category", []);
     };
   }, [bookCategory]);
-
-  //console.log("sortedbooks", sortedBooks);
   return (
     <div>
       <Navbar />
@@ -46,6 +45,8 @@ const BookListing = () => {
           <div className="col-md-10">
             <section className="container">
               <div className="row">
+                {loading && <p>Loading books.....</p>}
+                {error && <p>Error while loading books.</p>}
                 {sortedBooks.map((book, bookId) => {
                   return (
                     <Product
