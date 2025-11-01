@@ -34,7 +34,7 @@ const Userprofile = () => {
   return (
     <div>
       <Navbar />
-      <main className="container py-4" style={{ marginBottom: "5rem" }}>
+      <main className="container py-4" style={{ paddingBottom: "5rem" }}>
         {/* PERSONAL DETAILS + ADD ADDRESS */}
         <section className="row g-3 mb-4">
           <div className="col-md-6">

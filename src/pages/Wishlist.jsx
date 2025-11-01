@@ -21,7 +21,7 @@ const Wishlist = () => {
   return (
     <div>
       <Navbar />
-      <section className="p-3" style={{ marginBottom: "5rem" }}>
+      <section className="p-3" style={{ paddingBottom: "5rem" }}>
         <h1 className="text-center">Wish List</h1>
         <div className="container">
           {wishlist.length === 0 && <h2>There are no items in wishlist</h2>}

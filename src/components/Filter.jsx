@@ -36,7 +36,7 @@ const Filter = () => {
     updateFilter("category", newCategoryList);
   };
   return (
-    <aside className="p-3 mt-3">
+    <aside className="p-5 mt-5">
       <section className="d-flex justify-content-between">
         <h6>Filter</h6>
         <p style={{ cursor: "pointer", color: "blue" }} onClick={clearFilters}>

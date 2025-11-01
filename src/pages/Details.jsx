@@ -44,7 +44,7 @@ const Details = () => {
   return (
     <div>
       <Navbar />
-      <main style={{ marginBottom: "5rem" }}>
+      <main style={{ paddingBottom: "5rem" }}>
         <div className="container">
           {loading && (
             <h2 className="p3 text-center">Book details is loading</h2>

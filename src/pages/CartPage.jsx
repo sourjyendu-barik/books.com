@@ -42,7 +42,7 @@ const CartPage = () => {
         <h2 className="text-center m-5">There are no items in the cart.</h2>
       )}
       {cartitems && cartitems.length > 0 && (
-        <main style={{ marginBottom: "5rem" }}>
+        <main style={{ paddingBottom: "5rem" }}>
           <div className="container">
             {/* divide to container */}
             <div className="row">

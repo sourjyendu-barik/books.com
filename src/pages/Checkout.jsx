@@ -83,7 +83,7 @@ const Checkout = () => {
     <div>
       <Navbar />
 
-      <main className="container">
+      <main className="container" style={{ paddingBottom: "5rem" }}>
         <section className="row g-4 p-3">
           {/* Left Side — Summary */}
           <div className="col-md-6">
