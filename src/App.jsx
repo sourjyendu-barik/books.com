@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <main>
+      <main style={{ marginBottom: "5rem" }}>
         <div className="container my-3">
           <section className="h-25">
             <div className="row">

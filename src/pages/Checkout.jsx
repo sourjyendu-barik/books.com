@@ -83,7 +83,7 @@ const Checkout = () => {
     <div>
       <Navbar />
 
-      <main className="container pb-5">
+      <main className="container">
         <section className="row g-4 p-3">
           {/* Left Side — Summary */}
           <div className="col-md-6">
@@ -167,7 +167,7 @@ const Checkout = () => {
         </div>
 
         {/* Address Section */}
-        <h3 className="text-center">Chhose one address</h3>
+        <h3 className="text-center">Choose one address</h3>
         <Address />
 
         {/* Checkout Button */}

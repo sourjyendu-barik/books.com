@@ -31,7 +31,7 @@ const BookListing = () => {
   return (
     <div>
       <Navbar />
-      <main className="mt-3">
+      <main className="mt-3" style={{ paddingBottom: "5rem" }}>
         <div className="row">
           <div
             className="col-md-2 position-sticky"

@@ -14,7 +14,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg bg-light shadow-sm sticky-top">
+    <nav
+      className="navbar navbar-expand-lg bg-light shadow-sm sticky-top"
+      style={{ zIndex: 1050 }}
+    >
       <div className="container d-flex justify-content-between align-items-center">
         {/* Logo */}
         <NavLink
