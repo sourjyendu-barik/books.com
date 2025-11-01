@@ -16,7 +16,7 @@ const BookListing = () => {
     setShowmodel(true);
     setTimeout(() => {
       setShowmodel(false);
-    }, 2000);
+    }, 600);
   };
 
   useEffect(() => {
@@ -64,14 +64,9 @@ const BookListing = () => {
             </section>
           </div>
         </div>
-        {showModel && (
-          <Modal
-            show={showModel}
-            message="New item added in cart successfully."
-          />
-        )}
       </main>
       <Footer />
+      <Modal show={showModel} message="Item added in cart successfully" />
     </div>
   );
 };

@@ -123,6 +123,7 @@ const Userprofile = () => {
 
         {/* ADDRESS LIST */}
         <section className="mb-4">
+          <h3 className="text-center">Address list</h3>
           <Address />
         </section>
 

@@ -28,15 +28,15 @@ const Cartcard = ({ book }) => {
     setMessage("1 item removed");
   };
 
-  const handleRemovefromCart = (bookId) => {
-    setMessage("1 item removed from cart");
+  const handleRemovefromCart = (bookId, count) => {
+    setMessage(`${count} item removed from cart`);
     setTimeout(() => {
       removeFromCart(bookId);
     }, 800);
   };
 
   const handleMoveTowishlist = (book) => {
-    setMessage("1 item moved to wishlisty");
+    setMessage(`${book.name} move to wish list.`);
     setTimeout(() => {
       moveToWishlist(book);
     }, 800);
@@ -97,7 +97,7 @@ const Cartcard = ({ book }) => {
           <div className="mt-4 d-flex flex-column gap-2">
             <button
               className="btn btn-secondary rounded-3"
-              onClick={() => handleRemovefromCart(book.id)}
+              onClick={() => handleRemovefromCart(book.id, book.count)}
             >
               🗑️ Remove from Cart
             </button>

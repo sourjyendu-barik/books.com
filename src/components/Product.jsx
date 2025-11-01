@@ -24,11 +24,6 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
   };
   const handleAddToCart = (book) => {
     buttonFunction(book);
-    setMsg("Aded one item in cart.");
-    showModal(true);
-    setTimeout(() => {
-      showModal(false);
-    }, 800);
   };
   return (
     <div className="col-md-3 col-sm-6 mb-4 d-flex">

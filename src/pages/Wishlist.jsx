@@ -7,7 +7,9 @@ import Modal from "../components/Modal";
 const Wishlist = () => {
   const { wishlist, moveToCart } = useBookContext();
   const [showModal, setShowModal] = useState(false);
+  const [msg, setMsg] = useState("");
   const handleMovetoCart = (b) => {
+    setMsg(`${b.name} moved to cart`);
     setShowModal(true);
     setTimeout(() => {
       setShowModal(false);
@@ -40,7 +42,7 @@ const Wishlist = () => {
         </div>
       </section>
       <Footer />
-      <Modal show={showModal} message={"Moved to Wishlist"} />
+      <Modal show={showModal} message={msg} />
     </div>
   );
 };
