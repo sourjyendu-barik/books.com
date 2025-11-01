@@ -182,7 +182,7 @@ export default function BooksProvider({ children }) {
     setcartitems,
     currentAddress,
     setCurrentAdress,
-    data,
+
     loading,
     error,
   };

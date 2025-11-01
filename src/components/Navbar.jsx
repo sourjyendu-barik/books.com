@@ -24,7 +24,7 @@ const Navbar = () => {
           <i>Book.com</i>
         </NavLink>
 
-        {/* Right side icons (always visible) */}
+        {/* Mobile icons + menu toggle */}
         <div className="d-flex align-items-center gap-3 d-lg-none">
           <NavLink to="/wishlist" className="text-dark">
             <Wishcount />
@@ -35,6 +35,13 @@ const Navbar = () => {
           <NavLink to="/useprofile" className="text-dark">
             <User />
           </NavLink>
+          <button
+            className="navbar-toggler border-0 bg-transparent"
+            type="button"
+            onClick={() => setIsOpen(!isOpen)}
+          >
+            <Menu />
+          </button>
         </div>
 
         {/* Collapsible content */}
