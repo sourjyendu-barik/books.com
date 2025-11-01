@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import { useBookContext } from "../context/BookContext";
 import Modal from "./Modal";
 import Address from "./Address";
+import Footer from "./Footer";
 
 const Userprofile = () => {
   const { orders, setAddress, address } = useBookContext();
@@ -50,10 +51,6 @@ const Userprofile = () => {
                 </p>
                 <p>
                   <strong>Phone:</strong> 9876543210
-                </p>
-                <p className="mb-0">
-                  <strong>Default Address:</strong> 123 Street, Bhubaneswar,
-                  Odisha, 754001
                 </p>
               </div>
             </div>
@@ -207,6 +204,7 @@ const Userprofile = () => {
         {show && (
           <Modal show={show} message="New address added successfully." />
         )}
+        <Footer />
       </main>
     </div>
   );

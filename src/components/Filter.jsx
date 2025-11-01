@@ -96,7 +96,7 @@ const Filter = () => {
         );
       })}
 
-      <h6 className="mt-3">Sorting</h6>
+      <h6 className="mt-3">Sort</h6>
       <RadioButton
         label="Price: High to Low"
         name="sort"

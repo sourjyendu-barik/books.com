@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import { useBookContext } from "../context/BookContext";
 import Modal from "../components/Modal";
 import Address from "../components/Address";
+import Footer from "../components/Footer";
 const Checkout = () => {
   const location = useLocation();
   const { setOrders, setcartitems, currentAddress } = useBookContext();
+  const navigate = useNavigate();
   const [showModel, setShowModel] = useState(false);
   const {
     from,
@@ -44,6 +46,7 @@ const Checkout = () => {
 
   const itemsToDisplayed = from === "details" ? [book] : cartitems;
   //handler for order
+
   const handleOrder = (e) => {
     e.preventDefault();
 
@@ -72,6 +75,7 @@ const Checkout = () => {
     setShowModel(true);
     setTimeout(() => {
       setShowModel(false);
+      navigate("/useprofile");
     }, 2000);
   };
 
@@ -153,7 +157,17 @@ const Checkout = () => {
           </div>
         </section>
 
+        <div className="text-end">
+          <button
+            className="btn btn-primary"
+            onClick={() => navigate("/useprofile")}
+          >
+            Add One Address
+          </button>
+        </div>
+
         {/* Address Section */}
+        <h3 className="text-center">Chhose one address</h3>
         <Address />
 
         {/* Checkout Button */}
@@ -174,6 +188,7 @@ const Checkout = () => {
           currentAddress ? "Order Placed successfully" : "Select an address"
         }
       />
+      <Footer />
     </div>
   );
 };

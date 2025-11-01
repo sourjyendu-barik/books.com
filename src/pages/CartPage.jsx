@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import { useBookContext } from "../context/BookContext";
 import Cartcard from "../components/Cartcard";
 import { useNavigate } from "react-router";
+import Footer from "../components/Footer";
 const CartPage = () => {
   const { cartitems } = useBookContext();
   const totalitem = cartitems?.reduce((accu, curr) => {
@@ -90,6 +91,7 @@ const CartPage = () => {
           </div>
         </main>
       )}
+      <Footer />
     </div>
   );
 };

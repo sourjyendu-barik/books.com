@@ -7,33 +7,39 @@ const Cartcard = ({ book }) => {
   const { addItemCount, decreaseItemCount, removeFromCart, moveToWishlist } =
     useBookContext();
 
-  const [removeAlert, setRemoveAlert] = useState(false);
-  const [moveToWishlistAlert, setMovetoWishlistAlert] = useState(false);
-  const [increaseAlert, setIncreaseAlert] = useState(false);
-  const [decreaseAlert, setDecreaseAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [msg, setMsg] = useState("");
+
+  const setMessage = (msg) => {
+    setShowModal(true);
+    setMsg(msg);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 800);
+  };
 
   const handleAddItemCount = (book_id) => {
     addItemCount(book.id);
-    setIncreaseAlert(true);
-    setTimeout(() => setIncreaseAlert(false), 1000);
+    setMessage("1 item added");
   };
 
   const handleDecreaseCount = (book_id) => {
     decreaseItemCount(book_id);
-    setDecreaseAlert(true);
-    setTimeout(() => setDecreaseAlert(false), 1000);
+    setMessage("1 item removed");
   };
 
   const handleRemovefromCart = (bookId) => {
-    setRemoveAlert(true);
-    setTimeout(() => setRemoveAlert(false), 2000);
-    removeFromCart(bookId);
+    setMessage("1 item removed from cart");
+    setTimeout(() => {
+      removeFromCart(bookId);
+    }, 800);
   };
 
   const handleMoveTowishlist = (book) => {
-    setMovetoWishlistAlert(true);
-    setTimeout(() => setMovetoWishlistAlert(false), 2000);
-    moveToWishlist(book);
+    setMessage("1 item moved to wishlisty");
+    setTimeout(() => {
+      moveToWishlist(book);
+    }, 800);
   };
 
   return (
@@ -105,21 +111,7 @@ const Cartcard = ({ book }) => {
         </div>
       </div>
 
-      {/* Alerts */}
-      {removeAlert && (
-        <Modal
-          show={removeAlert}
-          message="Item removed from cart successfully"
-        />
-      )}
-      {moveToWishlistAlert && (
-        <Modal
-          show={moveToWishlistAlert}
-          message="Item moved to wishlist successfully."
-        />
-      )}
-      {increaseAlert && <Modal show={increaseAlert} message="1 Item added" />}
-      {decreaseAlert && <Modal show={decreaseAlert} message="1 Item removed" />}
+      <Modal show={showModal} message={msg} />
     </div>
   );
 };

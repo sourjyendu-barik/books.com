@@ -7,6 +7,7 @@ import { Heart, Truck, RotateCcw, CreditCard, Heading2 } from "lucide-react";
 import Rating from "../components/Rating";
 import Product from "../components/Product";
 import useFetch from "../hooks/useFetch";
+import Footer from "../components/Footer";
 import { useMemo } from "react";
 const Details = () => {
   const { bookId } = useParams();
@@ -200,6 +201,7 @@ const Details = () => {
             </div>
           )}
         </div>
+        <Footer />
       </main>
     </div>
   );

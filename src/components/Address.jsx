@@ -5,17 +5,15 @@ import AddressModal from "./AddressModal";
 const Address = () => {
   const { address, setAddress, currentAddress, setCurrentAdress } =
     useBookContext();
+
   const [editadressId, setEditAdressId] = useState(null);
 
-  const handleSelectAddress = (address) => {
-    setCurrentAdress(address);
+  const handleSelectAddress = (selectedAddress) => {
+    setCurrentAdress(selectedAddress);
   };
 
   const deleteAddress = (addressId) => {
-    const selectedAddress = address.find((a) => a.address_id === addressId);
-    setAddress((prev) =>
-      prev.filter((a) => a.address_id !== selectedAddress.address_id)
-    );
+    setAddress((prev) => prev.filter((a) => a.address_id !== addressId));
   };
 
   const editAddress = (addressId) => {
@@ -23,23 +21,24 @@ const Address = () => {
   };
 
   return (
-    <section className="my-4">
-      <h2 className="text-center fw-semibold mb-4">Choose an Address</h2>
+    <section className="my-2">
       <div className="row g-3">
         {address.map((a, index) => {
-          const isSelected =
-            currentAddress?.pin === a.pin && currentAddress?.house === a.house;
+          // ✅ Loose equality (handles number/string mismatch)
+          const isSelected = currentAddress?.address_id == a.address_id;
 
           return (
-            <div className="col-md-4" key={`address${index}`}>
+            <div className="col-md-4" key={a.address_id}>
               <div
-                className={`card shadow-sm h-100 border-0 position-relative ${
-                  isSelected ? "border border-3 border-success shadow-lg" : ""
-                }`}
                 onClick={() => handleSelectAddress(a)}
+                className="position-relative p-4 bg-white rounded-3 shadow-sm"
                 style={{
                   cursor: "pointer",
-                  transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                  transition: "all 0.2s ease",
+                  border: isSelected
+                    ? "3px solid black"
+                    : "3px solid transparent",
+                  minHeight: "180px",
                 }}
                 onMouseEnter={(e) =>
                   (e.currentTarget.style.transform = "translateY(-4px)")
@@ -48,6 +47,7 @@ const Address = () => {
                   (e.currentTarget.style.transform = "translateY(0)")
                 }
               >
+                {/* Edit/Delete icons */}
                 <div className="position-absolute top-0 end-0 m-2 d-flex">
                   <span
                     style={{
@@ -78,7 +78,9 @@ const Address = () => {
                     🗑️
                   </span>
                 </div>
-                <div className="card-body text-start p-4">
+
+                {/* Address details */}
+                <div className="text-start">
                   <h5 className="fw-semibold text-primary mb-3">
                     Address {index + 1}
                   </h5>
@@ -101,6 +103,7 @@ const Address = () => {
         })}
       </div>
 
+      {/* Edit modal */}
       {editadressId && (
         <AddressModal
           currentAddress_id={editadressId}

@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
 import { Heart } from "lucide-react";
 import { useBookContext } from "../context/BookContext";
 import { Link } from "react-router";
 import Rating from "./Rating";
-
+import Modal from "./Modal";
 const Product = ({ book, buttonLabel, buttonFunction }) => {
   const { toggleWishlist } = useBookContext();
+  const [modal, showModal] = useState(false);
+  const [msg, setMsg] = useState("");
+  const handleToggleWishlist = (book) => {
+    // toggleWishlist(book);
+    const message = book.isaddedinWhislist
+      ? "Removed from wishlist"
+      : "Added in wishlist";
+    setMsg(message);
+    showModal(true);
+    setTimeout(() => {
+      showModal(false);
+    }, 800);
+    setTimeout(() => {
+      toggleWishlist(book);
+    }, 500);
+  };
+  const handleAddToCart = (book) => {
+    buttonFunction(book);
+    setMsg("Aded one item in cart.");
+    showModal(true);
+    setTimeout(() => {
+      showModal(false);
+    }, 800);
+  };
   return (
-    // 🟢 CHANGE: Ensure consistent card size with "h-100" and same height grid columns
     <div className="col-md-3 col-sm-6 mb-4 d-flex">
       <div
         className="card position-relative shadow-sm border-0 rounded-4 overflow-hidden h-100 w-100"
         style={{
           transition: "transform 0.3s ease, box-shadow 0.3s ease",
+          maxWidth: "25rem",
         }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = "translateY(-6px)";
@@ -23,7 +47,6 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
           e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.1)";
         }}
       >
-        {/* 🟢 CHANGE: Fixed image height for identical card sizes */}
         <div className="overflow-hidden" style={{ height: "250px" }}>
           <Link to={`/booklisting/details/${book._id}`}>
             <img
@@ -31,8 +54,8 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
               alt={book.name}
               className="img-fluid w-100"
               style={{
-                height: "100%", // 🟢 Ensures image fills fixed height
-                objectFit: "cover", // 🟢 Keeps image proportional
+                height: "100%", // image fills fixed height
+                objectFit: "cover", //image proportional
                 transition: "transform 0.4s ease",
               }}
               onMouseEnter={(e) =>
@@ -58,7 +81,7 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
           }}
           onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.1)")}
           onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
-          onClick={() => toggleWishlist(book)}
+          onClick={() => handleToggleWishlist(book)}
         >
           <Heart
             size={22}
@@ -94,11 +117,12 @@ const Product = ({ book, buttonLabel, buttonFunction }) => {
           onMouseLeave={(e) =>
             (e.currentTarget.style.backgroundColor = "#212529")
           }
-          onClick={() => buttonFunction(book)}
+          onClick={() => handleAddToCart(book)}
         >
           {buttonLabel}
         </button>
       </div>
+      <Modal show={modal} message={msg} />
     </div>
   );
 };

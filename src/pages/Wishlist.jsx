@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import { useBookContext } from "../context/BookContext";
 import Product from "../components/Product";
+import Footer from "../components/Footer";
+import Modal from "../components/Modal";
 const Wishlist = () => {
   const { wishlist, moveToCart } = useBookContext();
+  const [showModal, setShowModal] = useState(false);
+  const handleMovetoCart = (b) => {
+    setShowModal(true);
+    setTimeout(() => {
+      setShowModal(false);
+    }, 800);
+    setTimeout(() => {
+      moveToCart(b);
+    }, 800);
+  };
   return (
     <div>
       <Navbar />
@@ -19,7 +31,7 @@ const Wishlist = () => {
                     book={book}
                     key={book.id}
                     buttonLabel={"Move to Cart"}
-                    buttonFunction={() => moveToCart(book)}
+                    buttonFunction={() => handleMovetoCart(book)}
                   />
                 ))}
               </div>
@@ -27,6 +39,8 @@ const Wishlist = () => {
           )}
         </div>
       </section>
+      <Footer />
+      <Modal show={showModal} message={"Moved to Wishlist"} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { Link, useNavigate } from "react-router";
 import CategoryCard from "./components/CategoryCard";
 import CategoryCardBottm from "./CategoryCardBottm";
+import Footer from "./components/Footer";
 function App() {
   const navigate = useNavigate();
   const handleCategoryClick = (categoryName) => {
@@ -70,6 +71,7 @@ function App() {
           </section>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

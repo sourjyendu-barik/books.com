@@ -5,6 +5,7 @@ import Product from "../components/Product";
 import Filter from "../components/Filter";
 import Modal from "../components/Modal";
 import { useParams } from "react-router";
+import Footer from "../components/Footer";
 const BookListing = () => {
   const { sortedBooks, addtoCart, filters, updateFilter, loading, error } =
     useBookContext();
@@ -44,6 +45,8 @@ const BookListing = () => {
           </div>
           <div className="col-md-10">
             <section className="container">
+              <h3 className="text-center">Books({sortedBooks.length})</h3>
+
               <div className="row">
                 {loading && <p>Loading books.....</p>}
                 {error && <p>Error while loading books.</p>}
@@ -68,6 +71,7 @@ const BookListing = () => {
           />
         )}
       </main>
+      <Footer />
     </div>
   );
 };
