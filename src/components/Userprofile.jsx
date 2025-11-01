@@ -34,7 +34,7 @@ const Userprofile = () => {
   return (
     <div>
       <Navbar />
-      <main className="container py-4" style={{ paddingBottom: "5rem" }}>
+      <main className="container pt-4" style={{ paddingBottom: "5rem" }}>
         {/* PERSONAL DETAILS + ADD ADDRESS */}
         <section className="row g-3 mb-4">
           <div className="col-md-6">
@@ -141,7 +141,7 @@ const Userprofile = () => {
               >
                 <div className="row g-3">
                   {/* LEFT SIDE */}
-                  <div className="col-md-4 col-12">
+                  <div className="col-md-5 col-12">
                     <div className="border rounded p-3 h-100 bg-light">
                       <h6 className="text-primary fw-semibold mb-2">
                         🧾 Order ID: {o.orderId || `#ORD${index + 1}`}
@@ -158,11 +158,15 @@ const Userprofile = () => {
                       <p className="fw-semibold text-success mt-2">
                         Payable: ₹{o.totalAmt}
                       </p>
+                      <p>
+                        <strong>Address:</strong>
+                        {`   ${o.currentAddress.house},${o.currentAddress.dist},${o.currentAddress.state},${o.currentAddress.pin}`}
+                      </p>
                     </div>
                   </div>
 
                   {/* RIGHT SIDE */}
-                  <div className="col-md-8 col-12">
+                  <div className="col-md-7 col-12">
                     <div
                       className="border rounded p-2 bg-white"
                       style={{ maxHeight: "250px", overflowY: "auto" }}
@@ -205,8 +209,8 @@ const Userprofile = () => {
         {show && (
           <Modal show={show} message="New address added successfully." />
         )}
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 };
