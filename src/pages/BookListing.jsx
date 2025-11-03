@@ -32,36 +32,38 @@ const BookListing = () => {
     <div>
       <Navbar />
       <main className="mt-3" style={{ paddingBottom: "5rem" }}>
-        <div className="row">
-          <div
-            className="col-md-2 position-sticky"
-            style={{
-              top: "90px",
-              height: "calc(100vh - 90px)",
-              overflowY: "auto",
-            }}
-          >
-            <Filter />
-          </div>
-          <div className="col-md-10">
-            <section className="container">
-              <h3 className="text-center">Books({sortedBooks.length})</h3>
+        <div className="container-fluid">
+          <div className="row">
+            <div
+              className="col-md-2 position-sticky"
+              style={{
+                top: "90px",
+                height: "calc(100vh - 90px)",
+                overflowY: "auto",
+              }}
+            >
+              <Filter />
+            </div>
+            <div className="col-md-10">
+              <section className="container">
+                <h3 className="text-center">Books({sortedBooks.length})</h3>
 
-              <div className="row">
-                {loading && <p>Loading books.....</p>}
-                {error && <p>Error while loading books.</p>}
-                {sortedBooks.map((book, bookId) => {
-                  return (
-                    <Product
-                      book={book}
-                      key={bookId}
-                      buttonLabel={"Add to Cart"}
-                      buttonFunction={() => handleAddtoCart(book)}
-                    />
-                  );
-                })}
-              </div>
-            </section>
+                <div className="row">
+                  {loading && <p>Loading books.....</p>}
+                  {error && <p>Error while loading books.</p>}
+                  {sortedBooks.map((book, bookId) => {
+                    return (
+                      <Product
+                        book={book}
+                        key={bookId}
+                        buttonLabel={"Add to Cart"}
+                        buttonFunction={() => handleAddtoCart(book)}
+                      />
+                    );
+                  })}
+                </div>
+              </section>
+            </div>
           </div>
         </div>
       </main>

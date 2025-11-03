@@ -39,11 +39,16 @@ const Filter = () => {
     <aside className="p-5">
       <section className="d-flex justify-content-between">
         <h6>Filter</h6>
-        <p style={{ cursor: "pointer", color: "blue" }} onClick={clearFilters}>
+        <button
+          type="button"
+          className="btn btn-secondary"
+          style={{ textDecoration: "none" }}
+          onClick={clearFilters}
+        >
           Clear
-        </p>
+        </button>
       </section>
-
+      style
       <h6 className="mt-2">Price</h6>
       <div className="position-relative mt-3">
         <input
@@ -64,7 +69,6 @@ const Filter = () => {
           <span>2000</span>
         </div>
       </div>
-
       <h6 className="mt-2">Category</h6>
       {loading && <p>Loading Category</p>}
       {error && <p>Error while loading category</p>}
@@ -80,9 +84,7 @@ const Filter = () => {
             handleFilter={handleCategory}
           />
         ))}
-
       <h6 className="mt-2">Rating</h6>
-
       {[4, 3, 2, 1].map((star) => {
         return (
           <RadioButton
@@ -95,7 +97,6 @@ const Filter = () => {
           />
         );
       })}
-
       <h6 className="mt-3">Sort</h6>
       <RadioButton
         label="Price: High to Low"
