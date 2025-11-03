@@ -36,7 +36,15 @@ const Filter = () => {
     updateFilter("category", newCategoryList);
   };
   return (
-    <aside className="p-2">
+    <aside
+      className="p-2 bg-light border-end"
+      style={{
+        position: "sticky",
+        top: "90px", // distance below navbar
+        alignSelf: "flex-start", // helps sticky work inside flex
+        height: "fit-content", // auto height, not fixed
+      }}
+    >
       <section className="d-flex justify-content-between">
         <h6>Filter</h6>
         <button

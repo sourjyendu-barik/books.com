@@ -33,20 +33,15 @@ const BookListing = () => {
       <Navbar />
       <main className="mt-3" style={{ paddingBottom: "5rem" }}>
         <div className="container-fluid">
-          <div className="row">
-            <div
-              className="col-md-2 position-sticky"
-              style={{
-                top: "90px",
-                height: "calc(100vh - 90px)",
-                overflowY: "auto",
-              }}
-            >
+          <div className="row g-0">
+            <div className="col-md-2">
               <Filter />
             </div>
             <div className="col-md-10">
               <section className="container">
-                <h3 className="text-center">Books({sortedBooks.length})</h3>
+                <h3 className="text-center bg-white py-2">
+                  Books({sortedBooks.length})
+                </h3>
 
                 <div className="row">
                   {loading && <p>Loading books.....</p>}
