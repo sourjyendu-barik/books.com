@@ -1,18 +1,80 @@
-# React + Vite
+# Book.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack e-commerce app where you can browse(cart management,wishlist management), search, order, and view detailed information abot books.  
+Built with a React frontend, Express/Node backend, MongoDB database.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Demo Link
 
-## React Compiler
+[Live Demo](https://books-com.vercel.app/)
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+## Quick Start
 
-## Expanding the ESLint configuration
+```
+git clone https://github.com/sourjyendu-barik/books.com.git
+cd <your-repo>
+npm install
+npm run dev      # or `npm start` / `yarn dev`
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+
+- React JS
+- React Router
+- Node.js
+- Express
+- MongoDB
+- Cloudnary
+
+## Demo Video
+
+Watch a walkthrough (15 minutes) of all major features of this app:
+[Explanation Video Link](https://drive.google.com/file/d/1PRRAZNZkE5t93Kf-DSt1iaFgtly_hJeG/view)
+
+## Features
+
+**Home**
+-Displays category-based book collections (Math, Science, History, Geography ect.)
+-Search books by title in real time and view all books in one place
+
+**Book Listing**
+-Browse all books with price, rating, and category filters
+-Search,filter and sort books in real time for quick discovery
+
+**Recipe Details**
+
+- View full book information (name,author,rating,discount,return policy,delivery option, description ect.)
+- Get similar books recommendation
+
+**Wishlist Management**
+-Maintain a wishlist of favorite books with price and rating info
+-Quickly move saved books from wishlist to cart for purchase
+
+**Cart Management**
+-Manage cart items with quantity controls, per-item discounts, and wishlist moves
+-View detailed price summary with savings, delivery charges, and a final “Place Order” checkout action
+
+**Order Management**
+-Checkout summary with total items, discounts, delivery charges, and final payable amount
+-Manage delivery addresses and confirm order with a single “Place Order” action
+
+## API Reference
+
+### **Get /api/products**<br>
+
+List all recipes<br>
+Sample Response:<br>
+`[{ _id, id, name, image, category, price, deliveryCharges...}, …]`
+
+### **GET /api/products/:id**<br>
+
+Get details for one recipe<br>
+Sample Response:<br>
+`{ _id, id, name, image, category, price, deliveryCharges...}`
+
+## Contact
+
+For bugs or feature request please reach out to sourjyendubarik7798@gmail.com
