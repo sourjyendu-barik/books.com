@@ -37,29 +37,34 @@ Watch a walkthrough (15 minutes) of all major features of this app:
 ## Features
 
 **Home**
--Displays category-based book collections (Math, Science, History, Geography ect.)
--Search books by title in real time and view all books in one place
+
+- Displays category-based book collections (Math, Science, History, Geography ect.)
+- Search books by title in real time and view all books in one place
 
 **Book Listing**
--Browse all books with price, rating, and category filters
--Search,filter and sort books in real time for quick discovery
 
-**Recipe Details**
+- Browse all books with price, rating, and category filters
+- Search,filter and sort books in real time for quick discovery
+
+**Book Details**
 
 - View full book information (name,author,rating,discount,return policy,delivery option, description ect.)
 - Get similar books recommendation
 
 **Wishlist Management**
--Maintain a wishlist of favorite books with price and rating info
--Quickly move saved books from wishlist to cart for purchase
+
+- Maintain a wishlist of favorite books with price and rating info
+- Quickly move saved books from wishlist to cart for purchase
 
 **Cart Management**
--Manage cart items with quantity controls, per-item discounts, and wishlist moves
--View detailed price summary with savings, delivery charges, and a final “Place Order” checkout action
+
+- Manage cart items with quantity controls, per-item discounts, and wishlist moves
+- View detailed price summary with savings, delivery charges, and a final “Place Order” checkout action
 
 **Order Management**
--Checkout summary with total items, discounts, delivery charges, and final payable amount
--Manage delivery addresses and confirm order with a single “Place Order” action
+
+- Checkout summary with total items, discounts, delivery charges, and final payable amount
+- Manage delivery addresses and confirm order with a single “Place Order” action
 
 ## API Reference
 
