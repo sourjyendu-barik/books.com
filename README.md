@@ -1,13 +1,13 @@
 # Book.com
 
-A full-stack e-commerce app where you can browse(cart management,wishlist management), search, order, and view detailed information abot books.  
+A full-stack e-commerce app where you can browse(cart management,wishlist management), search, order, and view detailed information about books.  
 Built with a React frontend, Express/Node backend, MongoDB database.
 
 ---
 
 ## Demo Link
 
-[Live Demo](https://books-com.vercel.app/)
+[Live Demo](https://books-com.vercel.app)
 
 ---
 
@@ -27,7 +27,7 @@ npm run dev      # or `npm start` / `yarn dev`
 - Node.js
 - Express
 - MongoDB
-- Cloudnary
+- Cloudinary
 
 ## Demo Video
 
@@ -38,7 +38,7 @@ Watch a walkthrough (15 minutes) of all major features of this app:
 
 **Home**
 
-- Displays category-based book collections (Math, Science, History, Geography ect.)
+- Displays category-based book collections (Math, Science, History, Geography etc.)
 - Search books by title in real time and view all books in one place
 
 **Book Listing**
@@ -48,7 +48,7 @@ Watch a walkthrough (15 minutes) of all major features of this app:
 
 **Book Details**
 
-- View full book information (name,author,rating,discount,return policy,delivery option, description ect.)
+- View full book information (name, author, rating, discount, return policy, delivery option, description etc.)
 - Get similar books recommendation
 
 **Wishlist Management**
@@ -70,13 +70,13 @@ Watch a walkthrough (15 minutes) of all major features of this app:
 
 ### **Get /api/products**<br>
 
-List all recipes<br>
+List all books<br>
 Sample Response:<br>
 `[{ _id, id, name, image, category, price, deliveryCharges...}, …]`
 
 ### **GET /api/products/:id**<br>
 
-Get details for one recipe<br>
+Get details for one book<br>
 Sample Response:<br>
 `{ _id, id, name, image, category, price, deliveryCharges...}`
 
