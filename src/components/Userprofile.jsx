@@ -4,8 +4,9 @@ import { useBookContext } from "../context/BookContext";
 import Modal from "./Modal";
 import Address from "./Address";
 import Footer from "./Footer";
-
+import { useAuth } from "../context/AuthContext";
 const Userprofile = () => {
+  const { user, loading, error, login, logout } = useAuth();
   const { orders, setAddress, address } = useBookContext();
   const [formData, setFormData] = useState({
     house: "",
@@ -43,15 +44,42 @@ const Userprofile = () => {
                 <h3 className="mb-3 text-secondary border-bottom pb-2">
                   Personal Details
                 </h3>
-                <p>
-                  <strong>Name:</strong> Sourjyendu Barik
-                </p>
-                <p>
-                  <strong>Email:</strong> sourjyendu@1234.com
-                </p>
-                <p>
-                  <strong>Phone:</strong> 9876543210
-                </p>
+
+                <div className="row align-items-center">
+                  {/* Left Side - User Details */}
+                  <div className="col-8">
+                    <p>
+                      <strong>Name:</strong> {user?.name}
+                    </p>
+
+                    <p>
+                      <strong>Email:</strong> {user?.email}
+                    </p>
+
+                    <p>
+                      <strong>Joined:</strong>{" "}
+                      {new Date(user?.joined).toLocaleDateString()}
+                    </p>
+                  </div>
+
+                  {/* Right Side - Profile Image */}
+                  <div className="col-4 text-end">
+                    <img
+                      src={user?.profilePicture}
+                      alt={user?.name}
+                      className="rounded-circle border shadow-sm"
+                      width="100"
+                      height="100"
+                    />
+                  </div>
+                </div>
+
+                <div className="d-flex justify-content-end mt-4">
+                  <button className="btn btn-outline-danger" onClick={logout}>
+                    <i className="bi bi-box-arrow-right me-2"></i>
+                    Logout
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -9,14 +9,13 @@ import Product from "../components/Product";
 import useFetch from "../hooks/useFetch";
 import Footer from "../components/Footer";
 import { useMemo } from "react";
+import { bookDetails } from "../api";
 const Details = () => {
   const { bookId } = useParams();
   const { bookslist, toggleWishlist, addtoCart, wishlist } = useBookContext();
 
-  const { data, loading, error } = useFetch(
-    `https://books-com-backend.vercel.app/api/products/${bookId}`
-  );
-
+  const { data, loading, error } = useFetch(() => bookDetails(bookId));
+  //console.log(data);
   const alike_booklist = useMemo(() => {
     const product = data?.data?.product;
     if (!product || bookslist.length === 0) return [];
@@ -99,7 +98,7 @@ const Details = () => {
                           <Heart
                             fill={
                               wishlist.some(
-                                (item) => item._id === data.data.product._id //modified
+                                (item) => item._id === data.data.product._id, //modified
                               )
                                 ? "red"
                                 : "white"

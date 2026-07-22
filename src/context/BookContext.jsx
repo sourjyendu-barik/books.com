@@ -2,16 +2,15 @@ import { createContext, useContext, useEffect, useMemo, useState } from "react";
 const BookContext = createContext();
 import useLocalstorage from "../hooks/useLocalstorage";
 import useFetch from "../hooks/useFetch";
-
+import { allProducts } from "../api";
 export default function BooksProvider({ children }) {
-  const { data, loading, error } = useFetch(
-    "https://books-com-backend.vercel.app/api/products"
-  );
+  const { data, loading, error } = useFetch(allProducts);
+  // console.log(data);
   const [bookslist, setBooksList] = useState([]);
   const [wishlist, setWishlist] = useLocalstorage("wishlist", []);
   const [cartitems, setcartitems] = useLocalstorage("cartItems", []);
   const [currentAddress, setCurrentAdress] = useState(null);
-
+  //console.log("data is ", data);
   //   Addrd this effect to load fetched data into bookslist
   useEffect(() => {
     if (!data?.data?.products) return;
@@ -20,10 +19,10 @@ export default function BooksProvider({ children }) {
       data.data.products.map((book) => ({
         ...book,
         isaddedinWhislist: wishlist.some((w) => w.id === book.id),
-      }))
+      })),
     );
   }, [data, wishlist]);
-
+  //console.log(bookslist);
   const [filters, setFilters] = useState({
     category: [],
     rating: null,
@@ -53,7 +52,7 @@ export default function BooksProvider({ children }) {
   //  Wishlist
   const toggleWishlist = (book) => {
     const updatedBooks = bookslist.map((b) =>
-      b.id === book.id ? { ...b, isaddedinWhislist: !b.isaddedinWhislist } : b
+      b.id === book.id ? { ...b, isaddedinWhislist: !b.isaddedinWhislist } : b,
     );
     setBooksList(updatedBooks);
 
@@ -76,7 +75,7 @@ export default function BooksProvider({ children }) {
     }
     if (filters.price) {
       filtered = filtered.filter(
-        (b) => b.price.discountedPrice <= filters.price
+        (b) => b.price.discountedPrice <= filters.price,
       );
     }
     if (filters.rating) {
@@ -84,7 +83,7 @@ export default function BooksProvider({ children }) {
     }
     if (filters.bookname) {
       filtered = filtered.filter((b) =>
-        b.name.toLowerCase().includes(filters.bookname.toLowerCase())
+        b.name.toLowerCase().includes(filters.bookname.toLowerCase()),
       );
     }
     return filtered;
@@ -113,7 +112,7 @@ export default function BooksProvider({ children }) {
       const exist = prev.find((b) => b.id === book.id);
       if (exist) {
         return prev.map((b) =>
-          b.id === book.id ? { ...b, count: b.count + 1 } : b
+          b.id === book.id ? { ...b, count: b.count + 1 } : b,
         );
       }
       return [...prev, { ...book, count: 1 }];
@@ -122,7 +121,7 @@ export default function BooksProvider({ children }) {
 
   const addItemCount = (book_id) => {
     setcartitems((prev) =>
-      prev.map((b) => (b.id === book_id ? { ...b, count: b.count + 1 } : b))
+      prev.map((b) => (b.id === book_id ? { ...b, count: b.count + 1 } : b)),
     );
   };
 
@@ -130,7 +129,7 @@ export default function BooksProvider({ children }) {
     setcartitems((prev) =>
       prev
         .map((b) => (b.id === book_id ? { ...b, count: b.count - 1 } : b))
-        .filter((b) => b.count > 0)
+        .filter((b) => b.count > 0),
     );
   };
 
@@ -141,8 +140,8 @@ export default function BooksProvider({ children }) {
   const moveToCart = (book) => {
     setBooksList((prev) =>
       prev.map((b) =>
-        b.id === book.id ? { ...b, isaddedinWhislist: false } : b
-      )
+        b.id === book.id ? { ...b, isaddedinWhislist: false } : b,
+      ),
     );
     setWishlist((prev) => prev.filter((b) => b.id !== book.id));
     addtoCart(book);
@@ -152,8 +151,8 @@ export default function BooksProvider({ children }) {
     removeFromCart(book.id);
     setBooksList((prev) =>
       prev.map((b) =>
-        b.id === book.id ? { ...b, isaddedinWhislist: true } : b
-      )
+        b.id === book.id ? { ...b, isaddedinWhislist: true } : b,
+      ),
     );
     setWishlist((prev) => {
       const exist = prev.some((b) => b.id === book.id);
@@ -189,5 +188,4 @@ export default function BooksProvider({ children }) {
 
   return <BookContext.Provider value={value}>{children}</BookContext.Provider>;
 }
-
 export const useBookContext = () => useContext(BookContext);
