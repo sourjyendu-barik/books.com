@@ -6,14 +6,14 @@ const api = axios.create({
   withCredentials: true,
 });
 
-// Attach Token from localStorage as a fallback for browsers blocking 3rd-party cookies
-api.interceptors.request.use((config) => {
-  const token = localStorage.getItem("token");
-  if (token) {
-    config.headers.Authorization = `Bearer ${token}`;
-  }
-  return config;
-});
+// // Attach Token from localStorage as a fallback for browsers blocking 3rd-party cookies
+// api.interceptors.request.use((config) => {
+//   const token = localStorage.getItem("token");
+//   if (token) {
+//     config.headers.Authorization = `Bearer ${token}`;
+//   }
+//   return config;
+// });
 
 export const authGoogle = async (code) => {
   const response = await api.post("/auth/callback", { code });
